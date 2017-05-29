@@ -1,8 +1,8 @@
 # Java Challenges
 
 Subdomains:
-- Introduction
-- Strings
+- [Introduction](./introduction)
+- [Strings](./strings)
 - BigNumber
 - Data Structures
 - Object Oriented Programming
