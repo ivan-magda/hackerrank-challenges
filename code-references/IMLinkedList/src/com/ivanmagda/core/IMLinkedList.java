@@ -20,11 +20,7 @@ public class IMLinkedList<T> implements Iterable<Node<T>>, Iterator<Node<T>> {
         this.count = 1;
     }
 
-    public Node<T> getHead() {
-        return head;
-    }
-
-    public int getCount() {
+    public int getSize() {
         return count;
     }
 
@@ -37,7 +33,7 @@ public class IMLinkedList<T> implements Iterable<Node<T>>, Iterator<Node<T>> {
         return false;
     }
 
-    public void add(T newData) {
+    public void addLast(T newData) {
         Node<T> newNode = new Node<T>(newData);
         Node<T> current = head;
 
@@ -51,21 +47,41 @@ public class IMLinkedList<T> implements Iterable<Node<T>>, Iterator<Node<T>> {
         }
     }
 
-    public void removeLast() {
+    public T removeFirst() {
+        if (head == null) {
+            throw new NullPointerException("Head is null");
+        }
+
+        T value = head.getData();
+        head = head.getNext();
+        count--;
+
+        return value;
+    }
+
+    public T removeLast() {
         if (head == null) {
             throw new NullPointerException("Head is null");
         }
 
         Node<T> current = head;
+        T value;
 
         if (current.getNext() == null) {
+            value = head.getData();
             head = null;
             count = 0;
         } else {
-            while (current.getNext().getNext() != null) current = current.getNext();
+            while (current.getNext().getNext() != null) {
+                current = current.getNext();
+            }
+
+            value = current.getNext().getData();
             current.setNext(null);
             count--;
         }
+
+        return value;
     }
 
     private Node<T> getNodeAt(int index) throws IndexOutOfBoundsException {
@@ -84,6 +100,14 @@ public class IMLinkedList<T> implements Iterable<Node<T>>, Iterator<Node<T>> {
 
     public T getAt(int index) throws IndexOutOfBoundsException {
         return getNodeAt(index).getData();
+    }
+
+    public T getFirst() {
+        if (head == null) {
+            throw new NullPointerException();
+        }
+
+        return head.getData();
     }
 
     @Override
