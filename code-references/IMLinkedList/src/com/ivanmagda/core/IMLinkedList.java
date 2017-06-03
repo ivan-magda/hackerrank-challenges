@@ -33,18 +33,32 @@ public class IMLinkedList<T> implements Iterable<Node<T>>, Iterator<Node<T>> {
         return false;
     }
 
+    public void addFirst(T value) {
+        Node<T> newHead = new Node<>(value);
+        if (head == null) {
+            initHead(newHead);
+        } else {
+            newHead.setNext(head);
+            head = newHead;
+        }
+    }
+
     public void addLast(T newData) {
-        Node<T> newNode = new Node<T>(newData);
+        Node<T> newNode = new Node<>(newData);
         Node<T> current = head;
 
         if (current == null) {
-            head = newNode;
-            count = 1;
+            initHead(newNode);
         } else {
             while (current.getNext() != null) current = current.getNext();
             current.setNext(newNode);
             count++;
         }
+    }
+
+    private void initHead(Node<T> node) {
+        head = node;
+        count = 1;
     }
 
     public T removeFirst() {
