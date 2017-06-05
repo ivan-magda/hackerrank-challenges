@@ -1,22 +1,23 @@
 package com.ivanmagda.core;
 
 import java.util.Iterator;
-import java.util.NoSuchElementException;
 
 public class IMLinkedList<T> implements Iterable<Node<T>>, Iterator<Node<T>> {
 
     private Node<T> head;
-    private int count;
+    private Node<T> iteratorCurrent;
 
-    private int iteratorIndex = 0;
+    private int count;
 
     public IMLinkedList() {
         this.head = null;
+        this.iteratorCurrent = null;
         this.count = 0;
     }
 
     public IMLinkedList(Node<T> head) {
         this.head = head;
+        this.iteratorCurrent = head;
         this.count = 1;
     }
 
@@ -58,6 +59,7 @@ public class IMLinkedList<T> implements Iterable<Node<T>>, Iterator<Node<T>> {
 
     private void initHead(Node<T> node) {
         head = node;
+        iteratorCurrent = head;
         count = 1;
     }
 
@@ -126,21 +128,20 @@ public class IMLinkedList<T> implements Iterable<Node<T>>, Iterator<Node<T>> {
 
     @Override
     public boolean hasNext() {
-        if (iteratorIndex < count) {
-            return true;
-        } else {
-            iteratorIndex = 0;
+        if (iteratorCurrent == null) {
+            iteratorCurrent = head;
             return false;
         }
+
+        return true;
     }
 
     @Override
     public Node<T> next() {
-        if (iteratorIndex == count) {
-            throw new NoSuchElementException();
-        }
+        Node<T> current = iteratorCurrent;
+        iteratorCurrent = iteratorCurrent.getNext();
 
-        return getNodeAt(iteratorIndex++);
+        return current;
     }
 
     @Override
