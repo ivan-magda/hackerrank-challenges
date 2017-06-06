@@ -1,5 +1,7 @@
 package com.ivanmagda;
 
+import com.ivanmagda.core.NonEmptyBST;
+
 import java.util.Random;
 
 public class Main {

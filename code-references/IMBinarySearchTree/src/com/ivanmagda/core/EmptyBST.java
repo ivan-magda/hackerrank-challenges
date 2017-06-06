@@ -1,4 +1,4 @@
-package com.ivanmagda;
+package com.ivanmagda.core;
 
 public class EmptyBST<T extends Comparable> implements Tree<T> {
 

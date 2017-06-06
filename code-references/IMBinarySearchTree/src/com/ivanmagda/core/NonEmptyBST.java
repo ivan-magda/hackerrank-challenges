@@ -1,4 +1,4 @@
-package com.ivanmagda;
+package com.ivanmagda.core;
 
 public class NonEmptyBST<T extends Comparable> implements Tree<T> {
 
@@ -40,10 +40,8 @@ public class NonEmptyBST<T extends Comparable> implements Tree<T> {
             return this;
         }
 
-        if (element.compareTo(data) < 0) {
-            return new NonEmptyBST<>(data, left.add(element), right);
-        } else {
-            return new NonEmptyBST<>(data, left, right.add(element));
-        }
+        return element.compareTo(data) < 0
+                ? new NonEmptyBST<>(data, left.add(element), right)
+                : new NonEmptyBST<>(data, left, right.add(element));
     }
 }
