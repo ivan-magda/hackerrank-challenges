@@ -1,6 +1,7 @@
 # Code Reference
 
 Subdomains:
-- [Linked list](./IMLinkedList)
+- [Linked List](./IMLinkedList)
 - [Queue](./IMQueue)
 - [Stack](./IMStack)
+- [Binary Search Tree](./IMBinarySearchTree)
