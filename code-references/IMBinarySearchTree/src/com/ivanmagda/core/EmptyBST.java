@@ -1,6 +1,6 @@
 package com.ivanmagda.core;
 
-public class EmptyBST<T extends Comparable> implements Tree<T> {
+public class EmptyBST<T extends Comparable<T>> implements Tree<T> {
 
     public EmptyBST() {
     }

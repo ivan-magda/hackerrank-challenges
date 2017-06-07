@@ -3,7 +3,7 @@ package com.ivanmagda.core;
 /**
  * Tree interface.
  */
-public interface Tree<T extends Comparable> {
+public interface Tree<T extends Comparable<T>> {
     public boolean isEmpty();
 
     public int cardinality();

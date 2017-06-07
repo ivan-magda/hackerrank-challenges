@@ -2,16 +2,10 @@ package com.ivanmagda;
 
 import com.ivanmagda.core.NonEmptyBST;
 
-import java.util.Random;
-
 public class Main {
 
     public static void main(String[] args) {
-        NonEmptyBST<Integer> tree = new NonEmptyBST<>(21);
-        Random random = new Random();
-        for (int i = 0; i < 10; i++) {
-            tree = tree.add(random.nextInt(100));
-        }
+        NonEmptyBST<Integer> tree = NonEmptyBST.buildFrom(new Integer[]{4, 2, 6, 1, 3, 5, 7});
 
         System.out.println("Cardinality: " + tree.cardinality());
         System.out.println("Is empty: " + tree.isEmpty());

@@ -1,6 +1,6 @@
 package com.ivanmagda.core;
 
-public class NonEmptyBST<T extends Comparable> implements Tree<T> {
+public class NonEmptyBST<T extends Comparable<T>> implements Tree<T> {
 
     private T data;
     private Tree<T> left;
@@ -16,6 +16,19 @@ public class NonEmptyBST<T extends Comparable> implements Tree<T> {
         this.data = data;
         this.left = left;
         this.right = right;
+    }
+
+    public static <T extends Comparable<T>> NonEmptyBST<T> buildFrom(T[] elements) {
+        if (elements == null || elements.length == 0) {
+            throw new IllegalArgumentException();
+        }
+
+        NonEmptyBST<T> tree = new NonEmptyBST<T>(elements[0]);
+        for (int i = 1; i < elements.length; i++) {
+            tree = tree.add(elements[i]);
+        }
+
+        return tree;
     }
 
     @Override
