@@ -1,6 +1,6 @@
 package com.ivanmagda;
 
-import com.ivanmagda.core.AdjacencyListGraph;
+import com.ivanmagda.core.list.AdjacencyListGraph;
 import com.ivanmagda.core.Vertex;
 
 public class Main {

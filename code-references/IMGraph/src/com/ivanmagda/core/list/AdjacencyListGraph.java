@@ -1,4 +1,8 @@
-package com.ivanmagda.core;
+package com.ivanmagda.core.list;
+
+import com.ivanmagda.core.AbstractGraph;
+import com.ivanmagda.core.Edge;
+import com.ivanmagda.core.Vertex;
 
 import java.util.ArrayList;
 import java.util.Arrays;

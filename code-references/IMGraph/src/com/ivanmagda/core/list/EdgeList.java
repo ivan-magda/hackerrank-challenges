@@ -1,4 +1,7 @@
-package com.ivanmagda.core;
+package com.ivanmagda.core.list;
+
+import com.ivanmagda.core.Edge;
+import com.ivanmagda.core.Vertex;
 
 import java.util.List;
 
