@@ -5,3 +5,4 @@ Subdomains:
 - [Queue](./IMQueue)
 - [Stack](./IMStack)
 - [Binary Search Tree](./IMBinarySearchTree)
+- [Graph](./IMGraph)
