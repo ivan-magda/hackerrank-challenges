@@ -25,7 +25,7 @@ public abstract class AbstractGraph<T> {
 
     public abstract void addUndirectedEdge(Vertex<T> from, Vertex<T> to, double weight);
 
-    public abstract double weightFrom(Vertex<T> sourceVertex, Vertex<T> destinationVertex);
+    public abstract double getWeightFrom(Vertex<T> sourceVertex, Vertex<T> destinationVertex);
 
-    public abstract List<Edge<T>> edgesFrom(Vertex<T> sourceVertex);
+    public abstract List<Edge<T>> getEdgesFrom(Vertex<T> sourceVertex);
 }

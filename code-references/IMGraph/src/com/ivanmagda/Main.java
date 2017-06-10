@@ -30,10 +30,10 @@ public class Main {
         graph.addDirectedEdge(v4, v1, 2.8);
         graph.addDirectedEdge(v2, v5, 3.2);
 
-        System.out.println("v1 -> v2: " + graph.weightFrom(v1, v2));
-        System.out.println("v1 -> v3: " + graph.weightFrom(v1, v3));
-        System.out.println("v3 -> v4: " + graph.weightFrom(v3, v4));
-        System.out.println("v4 -> v1: " + graph.weightFrom(v4, v1));
+        System.out.println("v1 -> v2: " + graph.getWeightFrom(v1, v2));
+        System.out.println("v1 -> v3: " + graph.getWeightFrom(v1, v3));
+        System.out.println("v3 -> v4: " + graph.getWeightFrom(v3, v4));
+        System.out.println("v4 -> v1: " + graph.getWeightFrom(v4, v1));
 
         System.out.println(graph);
     }

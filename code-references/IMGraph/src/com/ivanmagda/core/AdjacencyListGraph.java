@@ -75,7 +75,7 @@ public class AdjacencyListGraph<T> extends AbstractGraph<T> {
     }
 
     @Override
-    public double weightFrom(Vertex<T> sourceVertex, Vertex<T> destinationVertex) {
+    public double getWeightFrom(Vertex<T> sourceVertex, Vertex<T> destinationVertex) {
         List<Edge<T>> edges = adjacencyList.get(sourceVertex.getIndex()).getEdges();
 
         if (edges == null) {
@@ -92,7 +92,7 @@ public class AdjacencyListGraph<T> extends AbstractGraph<T> {
     }
 
     @Override
-    public List<Edge<T>> edgesFrom(Vertex<T> sourceVertex) {
+    public List<Edge<T>> getEdgesFrom(Vertex<T> sourceVertex) {
         List<Edge<T>> edges = adjacencyList.get(sourceVertex.getIndex()).getEdges();
         return edges != null ? edges : new ArrayList<>();
     }
