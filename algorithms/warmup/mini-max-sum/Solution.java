@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Main {
+class Solution {
 
     private static final int NUMBERS_COUNT = 5;
 
