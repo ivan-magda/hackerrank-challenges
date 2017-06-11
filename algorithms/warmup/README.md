@@ -14,7 +14,7 @@ java Solution
 
 Where `Solution.java` is your Java file.
 
-Subdomains:
+**Subdomains**:
 - [Solve Me First](./solve-me-first)
 - [Simple Array Sum](./simple-array-sum)
 - [Compare The Triplets](./compare-the-triplets)
