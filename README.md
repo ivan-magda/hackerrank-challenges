@@ -7,4 +7,5 @@ Subdomains:
 - [Algorithms](../master/algorithms)
 - [C++](../master/cpp)
 - [Java](../master/java)
+- [SQL](../master/sql)
 - [Code Reference](../master/code-references)
