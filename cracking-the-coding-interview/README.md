@@ -2,5 +2,5 @@
 
 Subdomains:
 - Data Structures
-- Algorithms
+- [Algorithms](./algorithms)
 - Techniques/Concepts
