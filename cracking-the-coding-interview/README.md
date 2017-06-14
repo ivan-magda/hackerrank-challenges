@@ -3,4 +3,4 @@
 Subdomains:
 - [Data Structures](./data-structures)
 - [Algorithms](./algorithms)
-- Techniques/Concepts
+- [Techniques/Concepts](./techniques-concepts)
