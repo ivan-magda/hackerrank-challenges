@@ -1,6 +1,6 @@
 # Cracking the Coding Interview
 
 Subdomains:
-- Data Structures
+- [Data Structures](./data-structures)
 - [Algorithms](./algorithms)
 - Techniques/Concepts
