@@ -1,7 +1,8 @@
 # Challenges
 
 Subdomains:
-- [Pattern Count](./pattern-count)
+- Easy
+  * [Pattern Count](./pattern-count)
 
 ## Build and Run
 
