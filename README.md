@@ -7,6 +7,7 @@ Subdomains:
 - [SQL](./sql)
 - [Java](./java)
 - [Algorithms](./algorithms)
+- [Challenges](./challenges)
 - [Code Reference](./code-references)
 - [30 Days of Code](./30-days-of-code)
 - [Cracking the Coding Interview](./cracking-the-coding-interview)
