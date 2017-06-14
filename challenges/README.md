@@ -2,6 +2,7 @@
 
 Subdomains:
 - Easy
+  * [Twin Arrays](./twin-arrays)
   * [Pattern Count](./pattern-count)
 
 ## Build and Run
