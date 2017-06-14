@@ -2,7 +2,7 @@
 
 Subdomains:
 - [Time Complexity: Primality](./big-o)
-- Recursion: Fibonacci Numbers
+- [Recursion: Fibonacci Numbers](./fibonacci-numbers)
 - Recursion: Davis' Staircase
 - DP: Coin Change
 - Bit Manipulation: Lonely Integer
