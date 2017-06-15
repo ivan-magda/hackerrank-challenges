@@ -5,7 +5,7 @@ Subdomains:
 - [Strings: Making Anagrams](./making-anagrams)
 - [Hash Tables: Ransom Note](./ransom-note)
 - [Linked Lists: Detect a Cycle](./linked-list-cycle)
-- Stacks: Balanced Brackets
+- [Stacks: Balanced Brackets](./balanced-brackets)
 - Queues: A Tale of Two Stacks
 - Trees: Is This a Binary Search Tree?
 - Heaps: Find the Running Median
