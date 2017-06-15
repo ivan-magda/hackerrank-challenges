@@ -7,7 +7,7 @@ Subdomains:
 - [Linked Lists: Detect a Cycle](./linked-list-cycle)
 - [Stacks: Balanced Brackets](./balanced-brackets)
 - [Queues: A Tale of Two Stacks](./queue-using-two-stacks)
-- Trees: Is This a Binary Search Tree?
+- [Trees: Is This a Binary Search Tree?](./binary-search-tree)
 - Heaps: Find the Running Median
 - Tries: Contacts
 
