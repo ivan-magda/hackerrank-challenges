@@ -1,8 +1,8 @@
 package com.ivanmagda.test;
 
-import com.ivanmagda.core.EmptyBST;
-import com.ivanmagda.core.NonEmptyBST;
-import com.ivanmagda.core.Tree;
+import com.ivanmagda.interfacelable.EmptyBST;
+import com.ivanmagda.interfacelable.NonEmptyBST;
+import com.ivanmagda.interfacelable.Tree;
 
 public class Test {
 

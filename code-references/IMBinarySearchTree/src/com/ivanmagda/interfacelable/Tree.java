@@ -1,4 +1,4 @@
-package com.ivanmagda.core;
+package com.ivanmagda.interfacelable;
 
 /**
  * Tree interface.
@@ -10,5 +10,5 @@ public interface Tree<T extends Comparable<T>> {
 
     public boolean isMember(T element);
 
-    public NonEmptyBST<T> add(T element);
+    NonEmptyBST<T> add(T element);
 }
