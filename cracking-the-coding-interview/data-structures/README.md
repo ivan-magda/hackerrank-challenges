@@ -3,7 +3,7 @@
 Subdomains:
 - [Arrays: Left Rotation](./array-left-rotation)
 - [Strings: Making Anagrams](./making-anagrams)
-- Hash Tables: Ransom Note
+- [Hash Tables: Ransom Note](./ransom-note)
 - Linked Lists: Detect a Cycle
 - Stacks: Balanced Brackets
 - Queues: A Tale of Two Stacks
