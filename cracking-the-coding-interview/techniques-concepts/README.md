@@ -5,7 +5,7 @@ Subdomains:
 - [Recursion: Fibonacci Numbers](./fibonacci-numbers)
 - Recursion: Davis' Staircase
 - DP: Coin Change
-- Bit Manipulation: Lonely Integer
+- [Bit Manipulation: Lonely Integer](./lonely-integer)
 
 ## Build and Run
 
