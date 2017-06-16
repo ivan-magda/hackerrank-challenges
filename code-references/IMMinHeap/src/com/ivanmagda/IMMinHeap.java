@@ -10,6 +10,15 @@ public class IMMinHeap {
     private int capacity = INITIAL_CAPACITY;
     private int[] items = new int[capacity];
 
+    public static IMMinHeap buildFrom(int[] values) {
+        IMMinHeap heap = new IMMinHeap();
+        for (int anValue : values) {
+            heap.add(anValue);
+        }
+
+        return heap;
+    }
+
     public int peek() {
         if (size == 0) throw new IllegalStateException();
         return items[0];
