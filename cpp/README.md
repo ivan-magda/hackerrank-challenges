@@ -7,4 +7,3 @@ Subdomains:
 - STL
 - Inheritance
 - Other Concepts
-
