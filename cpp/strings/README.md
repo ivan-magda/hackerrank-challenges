@@ -1,8 +1,8 @@
 # Strings Challenges
 
 Subdomains:
-- [Strings](./c-tutorial-strings)
-- StringStream
+- [Strings](./strings)
+- [StringStream](./stringstream)
 - Attribute Parser
 
 ## Build and Run
