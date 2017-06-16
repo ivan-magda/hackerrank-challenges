@@ -8,7 +8,7 @@ Subdomains:
 - [Stacks: Balanced Brackets](./balanced-brackets)
 - [Queues: A Tale of Two Stacks](./queue-using-two-stacks)
 - [Trees: Is This a Binary Search Tree?](./binary-search-tree)
-- Heaps: Find the Running Median
+- [Heaps: Find the Running Median](./find-the-running-median)
 - Tries: Contacts
 
 ## Build and Run
