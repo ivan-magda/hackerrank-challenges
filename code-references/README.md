@@ -8,3 +8,4 @@ Subdomains:
 - [Graph](./IMGraph)
 - [Resizable Array](./IMResizableArray)
 - [Min Heap](./IMMinHeap)
+- [Merge Sort](./IMMergeSort)
