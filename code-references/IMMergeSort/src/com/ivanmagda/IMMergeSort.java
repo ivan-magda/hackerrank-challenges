@@ -6,42 +6,52 @@ public class IMMergeSort {
     }
 
     public static void sort(int[] array) {
-        if (array == null || array.length <= 1) {
-            return;
-        }
+        if (array == null || array.length <= 1) return;
         sort(array, new int[array.length], 0, array.length - 1);
     }
 
-    private static void sort(int[] array, int[] temp, int leftStart, int rightEnd) {
+    public static long countInversions(int[] array) {
+        int[] copy = new int[array.length];
+        System.arraycopy(array, 0, copy, 0, array.length);
+
+        return sort(copy, new int[array.length], 0, array.length - 1);
+    }
+
+    private static long sort(int[] array, int[] temp, int leftStart, int rightEnd) {
         if (leftStart >= rightEnd) {
-            return;
+            return 0;
         }
 
         int middle = (leftStart + rightEnd) / 2;
-        sort(array, temp, leftStart, middle);
-        sort(array, temp, middle + 1, rightEnd);
-        mergeHalves(array, temp, leftStart, rightEnd);
+        long left = sort(array, temp, leftStart, middle);
+        long right = sort(array, temp, middle + 1, rightEnd);
+
+        return left + right + mergeHalves(array, temp, leftStart, rightEnd);
     }
 
-    private static void mergeHalves(int[] array, int[] temp, int leftStart, int rightEnd) {
-        int leftEnd = (rightEnd + leftStart) / 2;
-        int rightStart = leftEnd + 1;
+    private static long mergeHalves(int[] array, int[] temp, int leftStart, int rightEnd) {
+        int middle = (rightEnd + leftStart) / 2;
+        int rightStart = middle + 1;
         int size = rightEnd - leftStart + 1;
+        long count = 0;
 
         int left = leftStart;
         int right = rightStart;
         int index = leftStart;
 
-        while (left <= leftEnd && right <= rightEnd) {
+        while (left <= middle && right <= rightEnd) {
             if (array[left] <= array[right]) {
                 temp[index++] = array[left++];
             } else {
                 temp[index++] = array[right++];
+                count += middle - left + 1;
             }
         }
 
-        System.arraycopy(array, left, temp, index, leftEnd - left + 1);
+        System.arraycopy(array, left, temp, index, middle - left + 1);
         System.arraycopy(array, right, temp, index, rightEnd - right + 1);
         System.arraycopy(temp, leftStart, array, leftStart, size);
+
+        return count;
     }
 }
