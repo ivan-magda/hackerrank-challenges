@@ -3,7 +3,7 @@
 Subdomains:
 - [Sorting: Bubble Sort](./bubble-sort)
 - [Sorting: Comparator](./comparator-sorting)
-- Merge Sort: Counting Inversions
+- [Merge Sort: Counting Inversions](./merge-sort)
 - Binary Search: Ice Cream Parlor
 - DFS: Connected Cell in a Grid
 - BFS: Shortest Reach in a Graph
