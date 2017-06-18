@@ -10,3 +10,4 @@ Subdomains:
 - [Min Heap](./IMMinHeap)
 - [Merge Sort](./IMMergeSort)
 - [Fibonacci Numbers](./IMFibonacci)
+- [Count Paths in a Matrix](./IMCountPaths)
