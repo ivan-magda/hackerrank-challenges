@@ -9,3 +9,4 @@ Subdomains:
 - [Resizable Array](./IMResizableArray)
 - [Min Heap](./IMMinHeap)
 - [Merge Sort](./IMMergeSort)
+- [Fibonacci Numbers](./IMFibonacci)
