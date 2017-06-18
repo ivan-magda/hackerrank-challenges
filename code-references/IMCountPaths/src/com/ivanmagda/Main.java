@@ -14,6 +14,7 @@ public class Main {
                 {true, true, true, true, true, true, true, true}
         };
 
-        System.out.println(IMCountPaths.countPaths(grid));
+        System.out.println("Recursively: " + IMCountPaths.recursively(grid));
+        System.out.println("With memorization: " + IMCountPaths.withMemorization(grid));
     }
 }
