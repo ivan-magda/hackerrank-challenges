@@ -4,7 +4,7 @@ Subdomains:
 - [Time Complexity: Primality](./big-o)
 - [Recursion: Fibonacci Numbers](./fibonacci-numbers)
 - [Recursion: Davis' Staircase](./recursive-staircase)
-- DP: Coin Change
+- [DP: Coin Change](./coin-change)
 - [Bit Manipulation: Lonely Integer](./lonely-integer)
 
 ## Build and Run
