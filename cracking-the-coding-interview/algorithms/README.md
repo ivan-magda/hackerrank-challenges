@@ -5,7 +5,7 @@ Subdomains:
 - [Sorting: Comparator](./comparator-sorting)
 - [Merge Sort: Counting Inversions](./merge-sort)
 - [Binary Search: Ice Cream Parlor](./ice-cream-parlor)
-- DFS: Connected Cell in a Grid
+- [DFS: Connected Cell in a Grid](./connected-cell-in-a-grid)
 - BFS: Shortest Reach in a Graph
 
 ## Build and Run
