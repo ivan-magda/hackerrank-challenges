@@ -1,6 +1,8 @@
 # Code Reference
 
 Subdomains:
+- Sorting Algorithms
+	- [Algorithms](./IMSortAlgorithms)
 - Data Structures
 	- [Linked List](./IMLinkedList)
 	- [Queue](./IMQueue)
