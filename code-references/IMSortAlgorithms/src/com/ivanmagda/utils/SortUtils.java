@@ -21,7 +21,7 @@ public class SortUtils {
         return arrayToSort;
     }
 
-    public static int[] margeSort(int[] array) {
+    public static int[] mergeSort(int[] array) {
         int[] arrayToSort = array.clone();
         MergeSort.sort(arrayToSort);
         return arrayToSort;
