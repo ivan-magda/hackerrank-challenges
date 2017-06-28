@@ -14,7 +14,7 @@ class Node{
 class Solution{
     
     static void levelOrder(Node root){
-        if(root != null) {
+        if (root != null) {
             Queue<Node> queue = new LinkedList<>();
             // enqueue current root
             queue.add(root);
@@ -27,22 +27,24 @@ class Solution{
                 System.out.print(tree.data + " ");
                 
                 // enqueue child elements from next level in order
-                if(tree.left != null) {
+                if (tree.left != null) {
                     queue.add(tree.left);
                 }
-                if(tree.right != null) {
+
+                if (tree.right != null) {
                     queue.add(tree.right);
                 }
             }
         } 
     }
 
-    public static Node insert(Node root,int data){
-        if(root == null){
+    public static Node insert(Node root, int data){
+        if (root == null) {
             return new Node(data);
         } else {
             Node cur;
-            if(data <= root.data) {
+
+            if (data <= root.data) {
                 cur = insert(root.left, data);
                 root.left = cur;
             } else {
@@ -55,13 +57,15 @@ class Solution{
     }
 
     public static void main(String args[]){
-        Scanner sc=new Scanner(System.in);
-        int T=sc.nextInt();
-        Node root=null;
-        while(T-- > 0){
-            int data=sc.nextInt();
-            root=insert(root,data);
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        Node root = null;
+
+        while (T-- > 0) {
+            int data = sc.nextInt();
+            root = insert(root, data);
         }
+
         levelOrder(root);
     }   
 }
