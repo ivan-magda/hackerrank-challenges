@@ -1,6 +1,7 @@
 package com.ivanmagda.utils;
 
 import com.ivanmagda.sort.InsertionSort;
+import com.ivanmagda.sort.MergeSort;
 import com.ivanmagda.sort.SelectionSort;
 
 public class SortUtils {
@@ -17,6 +18,12 @@ public class SortUtils {
     public static int[] selectionSort(int[] array) {
         int[] arrayToSort = array.clone();
         SelectionSort.sort(arrayToSort);
+        return arrayToSort;
+    }
+
+    public static int[] margeSort(int[] array) {
+        int[] arrayToSort = array.clone();
+        MergeSort.sort(arrayToSort);
         return arrayToSort;
     }
 }
