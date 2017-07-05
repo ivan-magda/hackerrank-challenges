@@ -9,5 +9,6 @@ Subdomains:
 - [Algorithms](./algorithms)
 - [Challenges](./challenges)
 - [Code Reference](./code-references)
+- [Data Structures](./data-structures)
 - [30 Days of Code](./30-days-of-code)
 - [Cracking the Coding Interview](./cracking-the-coding-interview)
