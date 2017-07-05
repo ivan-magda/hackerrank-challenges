@@ -2,7 +2,7 @@
 
 This is repository where I will be posting the solutions that I come up with for the [HackerRank](https://www.hackerrank.com) challenges.
 
-Subdomains:
+#### Subdomains:
 - [C++](./cpp)
 - [SQL](./sql)
 - [Java](./java)
