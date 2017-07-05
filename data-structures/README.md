@@ -2,7 +2,7 @@
 
 Subdomains:
 - Arrays
-- Linked Lists
+- [Linked Lists](./linked-lists)
 - Trees
 - Balanced Trees
 - Stacks
