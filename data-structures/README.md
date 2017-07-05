@@ -1,7 +1,7 @@
 # Data Structures
 
 Subdomains:
-- Arrays
+- [Arrays](./arrays)
 - [Linked Lists](./linked-lists)
 - Trees
 - Balanced Trees
