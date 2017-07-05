@@ -1,4 +1,4 @@
-# Warmup
+# Linked Lists
 
 #### Subdomains:
 - [Print the Elements of a Linked List](./print-the-elements-of-a-linked-list)
