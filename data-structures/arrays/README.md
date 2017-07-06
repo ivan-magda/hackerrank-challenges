@@ -5,5 +5,5 @@
 - [2D Array - DS](./2d-array)
 - [Dynamic Array](./dynamic-array-problem)
 - [Left Rotation](./array-left-rotation)
-- Sparse Arrays
+- [Sparse Arrays](./sparse-arrays)
 - Algorithmic Crush
