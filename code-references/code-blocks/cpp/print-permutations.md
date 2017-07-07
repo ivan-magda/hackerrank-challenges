@@ -25,28 +25,31 @@ permute("a") just returns 'a', so we end up creating 1 string as opposed to 16 (
 using namespace std;
 
 void permute(string s, unordered_map<char,int> count, string perm) {
-		unordered_map<char,int>::iterator it;	
-		for(it = count.begin(); it != count.end(); it++) {
-			if(it->second > 0) {
-				count[it->first]--;
-				if(s.size() - perm.size() == 1) {
-					// Permutation is complete
-					cout<<perm + it->first<<"\n";
-				} else {
-					permute(s, count, perm + it->first);
-				}
-				count[it->first]++;
-			}
-		}
+    unordered_map<char,int>::iterator it;	
+    for(it = count.begin(); it != count.end(); it++) {
+        if (it->second > 0) {
+	    count[it->first]--;
+	    if (s.size() - perm.size() == 1) {
+	        // Permutation is complete
+	        cout<<perm + it->first<<"\n";
+	    } else {
+	        permute(s, count, perm + it->first);
+	    }
+	    
+	    count[it->first]++;
+	}
+    }
 }
 
 void printPermutations(string s) {
-	// Count the number of times each letter appears in the string
-	unordered_map<char,int> count; // count['a'] -> # of times 'a' appears in s
-	for(int i = 0; i < s.size(); i++) {
-		count[s[i]]++;
-	}
-	permute(s, count, "");
+    // Count the number of times each letter appears in the string
+    unordered_map<char,int> count; // count['a'] -> # of times 'a' appears in s
+    
+    for (int i = 0; i < s.size(); i++) {
+        count[s[i]]++;
+    }
+    
+    permute(s, count, "");
 }
 
 int main() {
