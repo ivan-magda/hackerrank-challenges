@@ -13,16 +13,20 @@ int dayOfTheWeek(long long year, long long month, long long day) {
        month = 13;
        year--;
      }
+     
      if(month == 2) {
        month = 14;
        year--;
      }
+     
      long long q = day;
      long long m = month;
      long long k = year % 100;
      long long j = year / 100;
      long long h = q + 13*(m+1)/5 + k + k/4 + j/4 + 5*j;
+     
      h = h % 7;
+     
      return h;
 }
 ```
