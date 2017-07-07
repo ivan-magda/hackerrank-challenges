@@ -1,6 +1,8 @@
 # Code Reference
 
 Subdomains:
+* [Code Blocks](./code-blocks)
+
 - Sorting Algorithms
 	- [Algorithms](./IMSortAlgorithms)
 - Data Structures
