@@ -1,6 +1,6 @@
 # Data Structures
 
-Subdomains:
+#### Subdomains:
 - [Arrays](./arrays)
 - [Linked Lists](./linked-lists)
 - Trees
