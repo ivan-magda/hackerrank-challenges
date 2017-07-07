@@ -6,7 +6,7 @@
 - [Insert a node at the head of a linked list](./insert-a-node-at-the-head-of-a-linked-list)
 - [Insert a node at a specific position in a linked list](./insert-a-node-at-a-specific-position-in-a-linked-list)
 - [Delete a Node](./delete-a-node-from-a-linked-list)
-- Print in Reverse
+- [Print in Reverse](./print-the-elements-of-a-linked-list-in-reverse)
 - Reverse a linked list
 - Compare two linked lists
 - Merge two sorted linked lists
