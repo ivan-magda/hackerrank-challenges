@@ -1,4 +1,4 @@
-# List of bitwise operators in c++: 
+# List of bitwise operators in c++
 
 #### Left shift:
 ```cpp
