@@ -1,6 +1,6 @@
 # Algorithms
 
-Subdomains:
+#### Subdomains:
 - [Warmup](./warmup)
 - Implementation
 - Strings
@@ -15,7 +15,7 @@ Subdomains:
 - Game Theory
 - NP Complete
 
-#### Acceptable Runtimes for Given Values of N: 
+## Acceptable Runtimes for Given Values of N: 
 
 General rule: Try to keep the number of iterations under a few million.
 
