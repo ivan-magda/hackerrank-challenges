@@ -100,7 +100,8 @@ string binaryToHex(string s) {
 }
 ```
 
-#### Method 2: Makes use of several libraries to perform the conversion, but involves converting
+#### Method 2:
+Makes use of several libraries to perform the conversion, but involves converting
 from binary to decimal first. Fails for large binary numbers (ones that require a bitset of
 more than 64 bits) since we can't store them in memory as unsigned numbers.
 
