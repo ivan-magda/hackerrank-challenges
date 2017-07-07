@@ -9,11 +9,11 @@ myVector.push_back(num);
 // 2D array
 int **adjacency_matrix = new int*[N];
 
-for(int i = 0; i < N; i++) {
-	adjacency_matrix[i] = new int[N];
-	for(int j = 0; j < N; j++) {
-		adjacency_matrix[i][j] = -1;
-	}
+for (int i = 0; i < N; i++) {
+    adjacency_matrix[i] = new int[N];
+    for (int j = 0; j < N; j++) {
+        adjacency_matrix[i][j] = -1;
+    }
 }
 ```
 
