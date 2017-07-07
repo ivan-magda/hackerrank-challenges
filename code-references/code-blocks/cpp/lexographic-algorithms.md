@@ -53,11 +53,11 @@ Currently requires a sorted string with unique characters
 
 ### Summary of Algorithm:
 Uses combinatorics and dynamic programming, see algorithm description below:
-==== Steps to Algorithm ==== 
-- 1. Find the first factorial greater than N, that tells you how many letters you need to get the Nth permutation
-- 2. Set aside whatever letters you don't need and compute  N = qb + r, where q is an integer, b is the largest factorial less than N and r is the remainder
-- 3. Find the qth index in the unsolved string (remaining letters) and add it to the solved string
-- 4. Set N = q and repeat until we compute a remainder of 1 or 0
+#### Steps to Algorithm
+1. Find the first factorial greater than N, that tells you how many letters you need to get the Nth permutation
+2. Set aside whatever letters you don't need and compute  N = qb + r, where q is an integer, b is the largest factorial less than N and r is the remainder
+3. Find the qth index in the unsolved string (remaining letters) and add it to the solved string
+4. Set N = q and repeat until we compute a remainder of 1 or 0
 
 #### Example:
 Ex. abcdef, find the 12th permutation
