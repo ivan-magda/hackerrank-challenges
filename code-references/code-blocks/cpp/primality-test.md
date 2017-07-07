@@ -15,13 +15,14 @@ for(long long i = 2; i < 1000000; i++) {
 }
 
 bool isPrime(long n) {
-	if(n <= 1) {
-		return false;
-	}
-	if(primes[n]) {
-		return true;
-	} else {
-		return false;
-	}
+    if (n <= 1) {
+        return false;
+    }
+    
+    if (primes[n]) {
+        return true;
+    } else {
+        return false;
+    }
 }
 ```
