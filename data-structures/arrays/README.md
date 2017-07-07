@@ -6,4 +6,4 @@
 - [Dynamic Array](./dynamic-array-problem)
 - [Left Rotation](./array-left-rotation)
 - [Sparse Arrays](./sparse-arrays)
-- Algorithmic Crush
+- [Algorithmic Crush](./crush-problem)
