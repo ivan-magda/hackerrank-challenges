@@ -10,7 +10,7 @@
 - [Reverse a linked list](./reverse-a-linked-list)
 - [Compare two linked lists](./compare-two-linked-lists)
 - [Merge two sorted linked lists](./merge-two-sorted-linked-lists)
-- Get Node Value
+- [Get Node Value](./get-the-value-of-the-node-at-a-specific-position-from-the-tail)
 - Delete duplicate-value nodes from a sorted linked list
 - Cycle Detection
 - Find Merge Point of Two Lists
