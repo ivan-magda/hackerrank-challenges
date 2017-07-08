@@ -8,15 +8,18 @@
   }
 */
 int GetNode(Node head, int positionFromTail) {
-    int index = 0;
     Node current = head;
     Node result = head;
+    int offset = 0;
     
     while(current != null) {
         current = current.next;
-        if (index++ > positionFromTail) {
+
+        if (offset > positionFromTail) {
             result = result.next;
         }
+
+        offset++;
     }
     
     return result.data;
