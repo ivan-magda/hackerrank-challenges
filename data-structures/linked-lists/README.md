@@ -8,7 +8,7 @@
 - [Delete a Node](./delete-a-node-from-a-linked-list)
 - [Print in Reverse](./print-the-elements-of-a-linked-list-in-reverse)
 - [Reverse a linked list](./reverse-a-linked-list)
-- Compare two linked lists
+- [Compare two linked lists](./compare-two-linked-lists)
 - Merge two sorted linked lists
 - Get Node Value
 - Delete duplicate-value nodes from a sorted linked list
