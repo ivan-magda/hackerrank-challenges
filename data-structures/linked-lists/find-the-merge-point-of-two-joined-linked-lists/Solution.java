@@ -26,3 +26,25 @@ int FindMergeNode(Node headA, Node headB) {
     
     return -1;
 }
+
+int FindMergeNode(Node headA, Node headB) {
+    Set<Node> set = new HashSet<>(16);
+    Node currentB = headB;
+    
+    // Build a look up table.
+    while (currentB != null) {
+        set.add(currentB);
+        currentB = currentB.next;
+    }
+    
+    Node curA = headA;
+    while (curA != null) {
+        if (set.contains(curA)) {
+            return curA.data;
+        }
+        
+        curA = curA.next;
+    }
+    
+    return -1;
+}
