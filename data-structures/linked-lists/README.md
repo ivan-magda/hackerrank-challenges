@@ -13,6 +13,6 @@
 - [Get Node Value](./get-the-value-of-the-node-at-a-specific-position-from-the-tail)
 - [Delete duplicate-value nodes from a sorted linked list](./delete-duplicate-value-nodes-from-a-sorted-linked-list)
 - [Cycle Detection](./detect-whether-a-linked-list-contains-a-cycle)
-- Find Merge Point of Two Lists
+- [Find Merge Point of Two Lists](./find-the-merge-point-of-two-joined-linked-lists)
 - Inserting a Node Into a Sorted Doubly Linked List
 - Reverse a doubly linked list
