@@ -12,5 +12,6 @@ public class Main {
         System.out.println("Insertion sort: " + Arrays.toString(SortUtils.insertionSort(array)));
         System.out.println("Selection sort: " + Arrays.toString(SortUtils.selectionSort(array)));
         System.out.println("Merge sort:     " + Arrays.toString(SortUtils.mergeSort(array)));
+        System.out.println("Quick sort:     " + Arrays.toString(SortUtils.quickSort(array)));
     }
 }
