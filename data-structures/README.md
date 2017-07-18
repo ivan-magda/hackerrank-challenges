@@ -3,7 +3,7 @@
 #### Subdomains:
 - [Arrays](./arrays)
 - [Linked Lists](./linked-lists)
-- Trees
+- [Trees](./trees)
 - Balanced Trees
 - Stacks
 - Queues
