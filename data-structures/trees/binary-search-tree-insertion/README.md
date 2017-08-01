@@ -1,6 +1,6 @@
-# Tree : Top View
+# Binary Search Tree : Insertion
 
-[Problem description](https://www.hackerrank.com/challenges/tree-top-view)
+[Problem description](https://www.hackerrank.com/challenges/binary-search-tree-insertion)
 
 ## Build and Run
 
