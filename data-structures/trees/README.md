@@ -6,3 +6,4 @@
 - [Inorder Traversal](./inorder-traversal)
 - [Height of a Binary Tree](./height-of-a-binary-tree)
 - [Top View](./tree-top-view)
+- [Level Order Traversal](./level-order-traversal)
