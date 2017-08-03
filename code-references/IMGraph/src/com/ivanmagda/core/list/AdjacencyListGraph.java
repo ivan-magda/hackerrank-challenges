@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class AdjacencyListGraph<T> extends AbstractGraph<T> {
@@ -25,12 +26,7 @@ public class AdjacencyListGraph<T> extends AbstractGraph<T> {
     }
 
     public List<Vertex<T>> getVertices() {
-        List<Vertex<T>> vertices = new ArrayList<>(adjacencyList.size());
-        for (EdgeList<T> edgeList : adjacencyList) {
-            vertices.add(edgeList.getVertex());
-        }
-
-        return vertices;
+        return adjacencyList.stream().map(EdgeList::getVertex).collect(Collectors.toList());
     }
 
     public List<Edge<T>> getEdges() {
@@ -46,7 +42,8 @@ public class AdjacencyListGraph<T> extends AbstractGraph<T> {
 
     @Override
     public Vertex<T> createVertex(T data) {
-        List<Vertex<T>> matchingVertices = getVertices().stream()
+        List<Vertex<T>> matchingVertices = getVertices()
+                .stream()
                 .filter(vertex -> vertex.getData().equals(data))
                 .collect(Collectors.toList());
 

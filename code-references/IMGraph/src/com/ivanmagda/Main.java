@@ -36,5 +36,6 @@ public class Main {
         System.out.println("v4 -> v1: " + graph.getWeightFrom(v4, v1));
 
         System.out.println(graph);
+        System.out.println("Vertices: " + graph.getVertices());
     }
 }
