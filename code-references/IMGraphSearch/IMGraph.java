@@ -39,7 +39,7 @@ class IMGraph {
         return node;
     }
 
-    private void adEdge(int source, int destination) {
+    private void addEdge(int source, int destination) {
         Node sourceNode = getNode(source);
         Node destinationNode = getNode(destination);
         sourceNode.adjacent.add(destinationNode);
