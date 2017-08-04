@@ -9,3 +9,4 @@
 - [Level Order Traversal](./level-order-traversal)
 - [Binary Search Tree: Insertion](./binary-search-tree-insertion)
 - [Huffman Decoding](./huffman-decoding)
+- [Lowest Common Ancestor](./lowest-common-ancestor)
