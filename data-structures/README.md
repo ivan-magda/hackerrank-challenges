@@ -5,7 +5,7 @@
 - [Linked Lists](./linked-lists)
 - [Trees](./trees)
 - Balanced Trees
-- Stacks
+- [Stacks](./stacks)
 - Queues
 - Heap
 - Disjoint Set
