@@ -6,7 +6,7 @@
 - [Trees](./trees)
 - Balanced Trees
 - [Stacks](./stacks)
-- Queues
+- [Queues](./queues)
 - Heap
 - Disjoint Set
 - Multiple Choise
