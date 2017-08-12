@@ -2,6 +2,7 @@
 
 Subdomains:
 - [Structs](./structs)
+- [Class](./class)
 
 ## Build and Run
 
