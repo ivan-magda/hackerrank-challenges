@@ -3,7 +3,7 @@
 Subdomains:
 - [Introduction](./introduction)
 - [Strings](./strings)
-- Classes
+- [Classes](./classes)
 - STL
 - Inheritance
 - Other Concepts
