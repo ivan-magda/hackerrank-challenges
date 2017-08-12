@@ -7,10 +7,10 @@
 using namespace std;
 
 struct Student {
-    int age;
-    string first_name;
-    string last_name;
-    int standard;
+    unsigned age{};
+    string first_name{};
+    string last_name{};
+    unsigned standard{};
 };
 
 int main() {
