@@ -2,7 +2,7 @@
 
 #### Subdomains:
 - [Warmup](./warmup)
-- Implementation
+- [Implementation](./implementation)
 - Strings
 - Sorting
 - Search
@@ -26,17 +26,3 @@ General rule: Try to keep the number of iterations under a few million.
 - 5 when N = 1.000.000.000; then O(N) is NOT fine. Search for a better option.
 
 Also, these values depends upon what are you doing in the loop. Costly statements may result in slow program.
-
-## Build and Run
-
-To compile the file, open your terminal and type:
-```
-javac Solution.java
-```
-
-To run the generated class file, use:
-```
-java Solution
-```
-
-Where `Solution.java` is your Java file.
