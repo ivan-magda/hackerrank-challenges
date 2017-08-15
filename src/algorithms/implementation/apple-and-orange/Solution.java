@@ -14,10 +14,10 @@ public class Solution {
             this.start = start;
             this.end = end;
         }
-    }
-    
-    private static boolean isInRange(Range range, int point) {
-        return point >= range.start && point <= range.end;
+        
+        boolean isIn(int point) {
+            return point >= start && point <= end;
+        }
     }
     
     private static int countApples(int[] apples, int start, Range range) {
@@ -25,7 +25,7 @@ public class Solution {
         
         for (int i = 0; i < apples.length; i++) {
             int point = start + apples[i];
-            if (isInRange(range, point)) {
+            if (range.isIn(point)) {
                 count++;
             }
         }
@@ -38,7 +38,7 @@ public class Solution {
         
         for (int i = 0; i < oranges.length; i++) {
             int point = start + oranges[i];
-            if (isInRange(range, point)) {
+            if (range.isIn(point)) {
                 count++;
             }
         }
