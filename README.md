@@ -15,6 +15,7 @@ Also, It's a home for elegant solutions to problems found on [HackerRank](https:
 
 * [Resources](./res)
 * [Code Reference](./src/code-references)
+* [Practice Problems](./src/practice-problems)
 
 ## Contributing
 
