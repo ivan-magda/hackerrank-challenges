@@ -1,7 +1,7 @@
 # Data Structures and Algorithms practice problems
 
 #### Subdomains:
-- Array
+- [Array](./array)
 - Backtracking
 - Binary
 - Binary Tree
