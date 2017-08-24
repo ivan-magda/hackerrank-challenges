@@ -7,3 +7,4 @@
 - [Find a duplicate element in a limited range array](./find-duplicate-element-limited-range-array)
 - [Find largest sub-array formed by consecutive integers](./find-largest-sub-array-formed-by-consecutive-integers)
 - [Find maximum length sub-array having given sum](./find-maximum-length-sub-array-having-given-sum)
+- [Find maximum length sub-array having equal number of 0’s and 1’s](./find-maximum-length-sub-array-equal-number-0s-1s)
