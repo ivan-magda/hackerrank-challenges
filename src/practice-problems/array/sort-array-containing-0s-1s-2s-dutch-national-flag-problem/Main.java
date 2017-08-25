@@ -1,7 +1,15 @@
 import java.util.Arrays;
 
+/**
+ * Sort an array containing 0’s, 1’s and 2’s (Dutch national flag problem).
+ * Given an array containing only 0’s, 1’s and 2’s, sort the array in linear time and using constant space.
+ */
 public class Main {
 
+    /**
+     * Linear-time partition routine to sort an array containing 0, 1 and 2.
+     * It similar to three-way Partitioning for Dutch national flag problem.
+     */
     private static void threeWayPartition(int[] array) {
         final int PIVOT = 1;
 
