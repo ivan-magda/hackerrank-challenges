@@ -15,26 +15,22 @@ public class Main {
 
         int start = 0, mid = 0;
         int end = array.length - 1;
-        int temp;
 
         while (mid <= end) {
             if (array[mid] < PIVOT) {
-                temp = array[start];
-                array[start] = array[mid];
-                array[mid] = temp;
-
-                start++;
-                mid++;
+                swap(array, start++, mid++);
             } else if (array[mid] > PIVOT) {
-                temp = array[mid];
-                array[mid] = array[end];
-                array[end] = temp;
-
-                end--;
+                swap(array, mid, end--);
             } else {
                 mid++;
             }
         }
+    }
+
+    private static void swap(int[] array, int first, int second) {
+        int temp = array[first];
+        array[first] = array[second];
+        array[second] = temp;
     }
 
     public static void main(String[] args) {
