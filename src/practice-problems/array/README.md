@@ -11,3 +11,4 @@
 - [Sort an array containing 0’s, 1’s and 2’s (Dutch national flag problem)](./sort-array-containing-0s-1s-2s-dutch-national-flag-problem)
 - [Inplace merge two sorted arrays](./inplace-merge-two-sorted-arrays)
 - [Merge two arrays by satisfying given constraints](./merge-two-arrays-satisfying-given-constraints)
+- [Find index of 0 to be replaced to get maximum length sequence of continuous ones](./find-index-0-replaced-get-maximum-length-sequence-of-continuous-ones)
