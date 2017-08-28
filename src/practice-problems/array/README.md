@@ -12,3 +12,4 @@
 - [Inplace merge two sorted arrays](./inplace-merge-two-sorted-arrays)
 - [Merge two arrays by satisfying given constraints](./merge-two-arrays-satisfying-given-constraints)
 - [Find index of 0 to be replaced to get maximum length sequence of continuous ones](./find-index-0-replaced-get-maximum-length-sequence-of-continuous-ones)
+- [Find maximum product of two integers in an array](./find-maximum-product-two-integers-array)
