@@ -14,3 +14,4 @@
 - [Find index of 0 to be replaced to get maximum length sequence of continuous ones](./find-index-0-replaced-get-maximum-length-sequence-of-continuous-ones)
 - [Find maximum product of two integers in an array](./find-maximum-product-two-integers-array)
 - [Shuffle a given array of elements (Fisher–Yates shuffle)](./shuffle-given-array-elements-fisher-yates-shuffle)
+- [Rearrange the array with alternate high and low elements](./rearrange-the-array-with-alternate-high-and-low-elements)
