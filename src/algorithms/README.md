@@ -3,7 +3,7 @@
 #### Subdomains:
 - [Warmup](./warmup)
 - [Implementation](./implementation)
-- Strings
+- [Strings](./strings)
 - Sorting
 - Search
 - Graph Theory
