@@ -16,3 +16,4 @@
 - [Shuffle a given array of elements (Fisher–Yates shuffle)](./shuffle-given-array-elements-fisher-yates-shuffle)
 - [Rearrange the array with alternate high and low elements](./rearrange-the-array-with-alternate-high-and-low-elements)
 - [Find equilibrium index of an array](./find-equilibrium-index-array)
+- [Flatten Array](./flatten-array)
