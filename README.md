@@ -9,6 +9,7 @@ Also, It's a home for elegant solutions to problems found on [HackerRank](https:
 - [Java](./src/java)
 - [Algorithms](./src/algorithms)
 - [Challenges](./src/challenges)
+- [Project Euler](./src/projecteuler)
 - [Data Structures](./src/data-structures)
 - [30 Days of Code](./src/30-days-of-code)
 - [Cracking the Coding Interview](./src/cracking-the-coding-interview)
