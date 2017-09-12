@@ -17,3 +17,4 @@
 - [Rearrange the array with alternate high and low elements](./rearrange-the-array-with-alternate-high-and-low-elements)
 - [Find equilibrium index of an array](./find-equilibrium-index-array)
 - [Flatten Array](./flatten-array)
+- [Find majority element in an array (Boyer–Moore majority vote algorithm)](./find-majority-element-in-an-array-boyer-moore-majority-vote-algorithm)
