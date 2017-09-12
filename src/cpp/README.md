@@ -1,6 +1,6 @@
 # C++ Challenges
 
-### Subdomains:
+#### Subdomains:
 - [Introduction](./introduction)
 - [Strings](./strings)
 - [Classes](./classes)
