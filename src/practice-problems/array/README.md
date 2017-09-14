@@ -18,3 +18,4 @@
 - [Find equilibrium index of an array](./find-equilibrium-index-array)
 - [Flatten Array](./flatten-array)
 - [Find majority element in an array (Boyer–Moore majority vote algorithm)](./find-majority-element-in-an-array-boyer-moore-majority-vote-algorithm)
+- [Move all zeros present in the array to the end](./move-zeros-present-array-end)
