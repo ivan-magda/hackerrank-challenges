@@ -19,3 +19,4 @@
 - [Flatten Array](./flatten-array)
 - [Find majority element in an array (Boyer–Moore majority vote algorithm)](./find-majority-element-in-an-array-boyer-moore-majority-vote-algorithm)
 - [Move all zeros present in the array to the end](./move-zeros-present-array-end)
+- [Replace each element of the array with product of every other element without using division operator](./replace-element-array-product-every-element-without-using-division-operator)
