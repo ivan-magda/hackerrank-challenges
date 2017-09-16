@@ -1,6 +1,7 @@
 # Algorithms
 
 #### Subdomains:
+
 - [Warmup](./warmup)
 - [Implementation](./implementation)
 - [Strings](./strings)
