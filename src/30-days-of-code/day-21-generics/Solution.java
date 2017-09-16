@@ -14,7 +14,7 @@ class Printer <T> {
     }
 }
 
-public class Generics {
+public class Solution {
     
     public static void main(String args[]){
         Scanner scanner = new Scanner(System.in);
