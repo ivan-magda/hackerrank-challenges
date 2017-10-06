@@ -18,3 +18,4 @@ Subdomains:
 	- [Count Paths in a Matrix](./IMCountPaths)
 	- [Binary Search](./IMBinarySearch)
 	- [Graph Search, DFS and BFS](./IMGraphSearch)
+	- [LRU: Page Replacement Algorithm](./KotlinPlayground)
