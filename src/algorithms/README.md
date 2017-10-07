@@ -5,7 +5,7 @@
 - [Warmup](./warmup)
 - [Implementation](./implementation)
 - [Strings](./strings)
-- Sorting
+- [Sorting](./sorting)
 - Search
 - Graph Theory
 - Greedy
