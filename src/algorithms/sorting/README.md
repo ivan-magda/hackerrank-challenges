@@ -2,5 +2,5 @@
 
 #### Subdomains:
 
-- Big Sorting
+- [Big Sorting](./big-sorting)
 - [Intro to Tutorial Challenges](./tutorial-intro)
