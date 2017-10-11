@@ -7,3 +7,4 @@
 - [Insertion Sort - Part 1](./insertionsort1)
 - [Insertion Sort - Part 2](./insertionsort2)
 - [Correctness and the Loop Invariant](./correctness-invariant)
+- [Running Time of Algorithms](./runningtime)
