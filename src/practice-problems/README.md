@@ -13,7 +13,7 @@
 - Linked List
 - Matrix
 - Queue
-- Sorting
+- [Sorting](./sorting)
 - Stack
 - String
 - Trie
