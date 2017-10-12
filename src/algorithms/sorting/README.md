@@ -10,3 +10,4 @@
 - [Running Time of Algorithms](./runningtime)
 - [Quicksort 1 - Partition](./quicksort1)
 - [Counting Sort 1](./countingsort1)
+- [Counting Sort 2](./countingsort2)
