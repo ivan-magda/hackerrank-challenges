@@ -9,3 +9,4 @@
 - [Correctness and the Loop Invariant](./correctness-invariant)
 - [Running Time of Algorithms](./runningtime)
 - [Quicksort 1 - Partition](./quicksort1)
+- [Counting Sort 1](./countingsort1)
