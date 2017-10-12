@@ -1,4 +1,6 @@
 # Sorting
 
 #### Subdomains:
-- [Insertion sort](./insertion-sort)
+
+- [Insertion Sort](./insertion-sort)
+- [Selection Sort](./selection-sort)
