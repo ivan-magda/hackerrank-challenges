@@ -1,4 +1,4 @@
-# Quick sort
+# Quicksort (Recursion)
 
 [Description](http://www.techiedelight.com/quicksort/)
 
