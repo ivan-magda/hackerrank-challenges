@@ -4,6 +4,7 @@ Subdomains:
 - [Code Blocks](./code-blocks)
 - Sorting Algorithms
 	- [Algorithms](./IMSortAlgorithms)
+	- [External Merge Sort](./ExternalMergeSort)
 - Data Structures
 	- [Linked List](./IMLinkedList)
 	- [Queue](./IMQueue)
