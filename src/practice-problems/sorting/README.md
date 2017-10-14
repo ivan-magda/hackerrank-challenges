@@ -8,3 +8,4 @@
 - [Merge Sort](./merge-sort)
 - [Quicksort (Recursion)](./quicksort)
 - [Quicksort (Iterative)](./iterative-implementation-of-quicksort)
+- [Quicksort (Hybrid)](./hybrid-quicksort)
