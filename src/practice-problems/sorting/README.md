@@ -6,3 +6,4 @@
 - [Selection Sort](./selection-sort)
 - [Bubble Sort](./bubble-sort)
 - [Merge Sort](./merge-sort)
+- [Quicksort](./quicksort)
