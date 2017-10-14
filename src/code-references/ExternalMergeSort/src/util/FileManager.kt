@@ -1,15 +1,12 @@
 package util
 
+import model.MergeSortPartitionConfigurable
+import model.RandomGenerative
 import java.io.File
 
-class FileManager {
+class FileManager(private val partitionConfigurator: MergeSortPartitionConfigurable) {
 
     companion object {
-        private val INPUT_FILE_COUNT_PARTITIONS = 10
-        private val INPUT_FILE_SIZE_PARTITION = 1000
-
-        private val RANDOM_MAX_VALUE = 10000
-
         private val INPUT_FILE_NAME = "input.txt"
         private val OUTPUT_FILE_NAME = "output.txt"
     }
@@ -17,10 +14,11 @@ class FileManager {
     private val inputFile = File(INPUT_FILE_NAME)
     private val outputFile = File(OUTPUT_FILE_NAME)
 
-    fun generateInput() {
+    fun generateInput(generator: RandomGenerative) {
+        val size = partitionConfigurator.countPartitions * partitionConfigurator.sizePartition
         inputFile.printWriter().use { out ->
-            (0 until INPUT_FILE_COUNT_PARTITIONS * INPUT_FILE_SIZE_PARTITION)
-                    .forEach { out.print("${RandomGenerator.getBetween(-RANDOM_MAX_VALUE, RANDOM_MAX_VALUE)} ") }
+            (0 until size)
+                    .forEach { out.print("${generator.nextInt()} ") }
         }
     }
 }
