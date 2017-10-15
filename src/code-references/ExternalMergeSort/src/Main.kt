@@ -1,4 +1,5 @@
 import model.MergeSortPartitionConfigurable
+import sort.MergeSort
 import util.FileManager
 import util.RandomGenerator
 
@@ -13,4 +14,11 @@ fun main(args: Array<String>) {
             get() = INPUT_FILE_SIZE_PARTITION
     })
     fileManager.generateInput(generator = RandomGenerator())
+
+    // Read the input file, create initial runs and assign the runs
+    // to the scratch output files.
+    fileManager.createInitialRuns(sortDirector = MergeSort())
+
+    // Merge the runs using K-way merging.
+    fileManager.mergeFiles()
 }
