@@ -6,7 +6,7 @@ import java.util.*
 class RandomGenerator() : RandomGenerative {
 
     companion object {
-        private val MAX_VALUE = 10000
+        private val MAX_VALUE = 100_000
         private val MIN_VALUE = -MAX_VALUE
     }
 
