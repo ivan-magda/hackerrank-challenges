@@ -1,6 +1,6 @@
 # Code Reference
 
-Subdomains:
+#### Subdomains:
 - [Code Blocks](./code-blocks)
 - Sorting Algorithms
 	- [Algorithms](./IMSortAlgorithms)
