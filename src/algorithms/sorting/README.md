@@ -12,3 +12,4 @@
 - [Counting Sort 1](./countingsort1)
 - [Counting Sort 2](./countingsort2)
 - [The Full Counting Sort](./countingsort4)
+- [Closest Numbers](./closest-numbers)
