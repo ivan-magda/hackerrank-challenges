@@ -13,7 +13,6 @@ Also, It's a home for elegant solutions to problems found on [HackerRank](https:
 - [Data Structures](./src/data-structures)
 - [30 Days of Code](./src/30-days-of-code)
 - [Cracking the Coding Interview](./src/cracking-the-coding-interview)
-
 * [Resources](./res)
 * [Code Reference](./src/code-references)
 * [Practice Problems](./src/practice-problems)
