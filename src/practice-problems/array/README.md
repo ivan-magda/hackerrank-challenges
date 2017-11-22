@@ -22,3 +22,4 @@
 - [Replace each element of the array with product of every other element without using division operator](./replace-element-array-product-every-element-without-using-division-operator)
 - [Find Longest Bitonic Subarray in an array](./find-longest-bitonic-subarray-array)
 - [Find maximum difference between two elements in the array by satisfying given constraints](./find-maximum-difference-between-two-elements-array)
+- [Calculate the median of an array](./median-array)
