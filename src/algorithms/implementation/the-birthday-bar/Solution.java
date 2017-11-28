@@ -3,7 +3,7 @@ public class Main {
     private static int solve(int length, int[] values, int targetSum, int targetConsecutiveItems) {
         int res = 0;
 
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < length && (i + targetConsecutiveItems - 1 < length); i++) {
             int sum = 0;
             int countConsecutive = 1;
             for (int j = i; countConsecutive <= targetConsecutiveItems && j < length; j++, countConsecutive++) {
