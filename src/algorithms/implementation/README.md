@@ -9,3 +9,4 @@
 - [Breaking the Records](./breaking-best-and-worst-records)
 - [Birthday Chocolate](./the-birthday-bar)
 - [Divisible Sum Pairs](./divisible-sum-pairs)
+- [Migratory Birds](./migratory-birds)
