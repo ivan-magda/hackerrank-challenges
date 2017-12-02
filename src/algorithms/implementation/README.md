@@ -12,3 +12,4 @@
 - [Migratory Birds](./migratory-birds)
 - [Day of the Programmer](./day-of-the-programmer)
 - [Bon Appétit](./bon-appetit)
+- [Sock Merchant](./sock-merchant)
