@@ -9,6 +9,7 @@
 	- [Linked List](./IMLinkedList)
 	- [Queue](./IMQueue)
 	- [Stack](./IMStack)
+	- [Tree](./IMTree)
 	- [Binary Search Tree](./IMBinarySearchTree)
 	- [Graph](./IMGraph)
 	- [Resizable Array](./IMResizableArray)
