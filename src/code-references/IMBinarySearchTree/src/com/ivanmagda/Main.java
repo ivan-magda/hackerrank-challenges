@@ -13,13 +13,27 @@ public class Main {
         System.out.println("Is contains 5: " + tree.isMember(5));
         System.out.println();
 
-        BinarySearchTree binarySearchTree = new BinarySearchTree(10);
+        BinarySearchTree bst = new BinarySearchTree(10);
 
-        binarySearchTree.add(5);
-        binarySearchTree.add(15);
-        binarySearchTree.add(8);
+        bst.add(5);
+        bst.add(15);
+        bst.add(8);
 
-        System.out.println("Is contains 5: " + (binarySearchTree.contains(5) ? "Yes" : "No"));
-        System.out.println("Is contains 1: " + (binarySearchTree.contains(1) ? "Yes" : "No"));
+        System.out.println("Is contains 5: " + (bst.contains(5) ? "Yes" : "No"));
+        System.out.println("Is contains 1: " + (bst.contains(1) ? "Yes" : "No"));
+        System.out.println();
+
+        bst = new BinarySearchTree(5);
+        bst.add(2);
+        bst.add(18);
+        bst.add(3);
+        bst.add(-4);
+
+        System.out.println(bst);
+        System.out.println("Min value: " + String.valueOf(bst.getMinimum().getData()));
+        System.out.println("Max value: " + String.valueOf(bst.getMaximum().getData()));
+
+        bst.remove(5);
+        System.out.println(bst);
     }
 }

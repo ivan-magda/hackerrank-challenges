@@ -16,8 +16,16 @@ public class Node {
         return left;
     }
 
+    public void setLeft(Node left) {
+        this.left = left;
+    }
+
     public Node getRight() {
         return right;
+    }
+
+    public void setRight(Node right) {
+        this.right = right;
     }
 
     public int getData() {
@@ -74,6 +82,25 @@ public class Node {
         }
 
         return node;
+    }
+
+    public boolean remove(int value, Node parent) {
+        if (value < data) {
+            return left != null && left.remove(value, this);
+        } else if (value > data) {
+            return right != null && right.remove(value, this);
+        } else {
+            if (left != null && right != null) {
+                data = right.getMinimum().data;
+                right.remove(data, this);
+            } else if (parent.left == this) {
+                parent.left = (left != null) ? left : right;
+            } else if (parent.right == this) {
+                parent.right = (left != null) ? left : right;
+            }
+
+            return true;
+        }
     }
 
     @Override

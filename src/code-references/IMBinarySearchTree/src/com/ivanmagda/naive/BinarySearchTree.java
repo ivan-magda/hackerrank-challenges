@@ -28,6 +28,24 @@ public class BinarySearchTree {
         return head.getMaximum();
     }
 
+    public boolean remove(int value) {
+        if (head == null) {
+            return false;
+        } else {
+            if (head.getData() == value) {
+                Node auxRoot = new Node(0);
+                auxRoot.setLeft(head);
+
+                boolean result = head.remove(value, auxRoot);
+                head = auxRoot.getLeft();
+
+                return result;
+            } else {
+                return head.remove(value, null);
+            }
+        }
+    }
+
     @Override
     public String toString() {
         return head.toString();
