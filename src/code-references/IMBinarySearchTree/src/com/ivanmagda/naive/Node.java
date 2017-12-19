@@ -56,6 +56,26 @@ public class Node {
         return search(value) != null;
     }
 
+    public Node getMinimum() {
+        Node node = this;
+
+        while (node.getLeft() != null) {
+            node = node.getLeft();
+        }
+
+        return node;
+    }
+
+    public Node getMaximum() {
+        Node node = this;
+
+        while (node.getRight() != null) {
+            node = node.getRight();
+        }
+
+        return node;
+    }
+
     @Override
     public String toString() {
         if (left == null && right == null) {

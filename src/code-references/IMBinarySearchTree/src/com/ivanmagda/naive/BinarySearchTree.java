@@ -21,23 +21,11 @@ public class BinarySearchTree {
     }
 
     public Node getMinimum() {
-        Node node = head;
-
-        while (node.getLeft() != null) {
-            node = node.getLeft();
-        }
-
-        return node;
+        return head.getMinimum();
     }
 
     public Node getMaximum() {
-        Node node = head;
-
-        while (node.getRight() != null) {
-            node = node.getRight();
-        }
-
-        return node;
+        return head.getMaximum();
     }
 
     @Override
