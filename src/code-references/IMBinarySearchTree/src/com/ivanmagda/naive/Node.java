@@ -39,4 +39,17 @@ public class Node {
             return right != null && right.contains(value);
         }
     }
+
+    @Override
+    public String toString() {
+        if (left == null && right == null) {
+            return "(" + String.valueOf(data) + ")";
+        } else {
+            return "(" +
+                    (left == null ? "()" : left.toString()) + " " +
+                    String.valueOf(data) + " " +
+                    (right == null ? "()" : right.toString())
+                    + ")";
+        }
+    }
 }

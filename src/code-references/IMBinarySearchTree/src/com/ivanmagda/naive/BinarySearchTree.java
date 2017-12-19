@@ -15,4 +15,9 @@ public class BinarySearchTree {
     public boolean contains(int value) {
         return head.contains(value);
     }
+
+    @Override
+    public String toString() {
+        return head.toString();
+    }
 }
