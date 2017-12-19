@@ -12,6 +12,10 @@ public class BinarySearchTree {
         head.insert(value);
     }
 
+    public Node search(int value) {
+        return head.search(value);
+    }
+
     public boolean contains(int value) {
         return head.contains(value);
     }

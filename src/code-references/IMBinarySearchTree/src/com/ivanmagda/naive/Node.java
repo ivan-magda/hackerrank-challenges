@@ -42,14 +42,18 @@ public class Node {
         }
     }
 
-    public boolean contains(int value) {
+    public Node search(int value) {
         if (data == value) {
-            return true;
+            return this;
         } else if (value <= data) {
-            return left != null && left.contains(value);
+            return left != null ? left.search(value) : null;
         } else {
-            return right != null && right.contains(value);
+            return right != null ? right.search(value) : null;
         }
+    }
+
+    public boolean contains(int value) {
+        return search(value) != null;
     }
 
     @Override
