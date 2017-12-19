@@ -12,6 +12,18 @@ public class Node {
         this.right = null;
     }
 
+    public Node getLeft() {
+        return left;
+    }
+
+    public Node getRight() {
+        return right;
+    }
+
+    public int getData() {
+        return data;
+    }
+
     public void insert(int value) {
         Node node = new Node(value);
 

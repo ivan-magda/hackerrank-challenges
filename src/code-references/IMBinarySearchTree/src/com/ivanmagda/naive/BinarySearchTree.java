@@ -16,6 +16,26 @@ public class BinarySearchTree {
         return head.contains(value);
     }
 
+    public Node getMinimum() {
+        Node node = head;
+
+        while (node.getLeft() != null) {
+            node = node.getLeft();
+        }
+
+        return node;
+    }
+
+    public Node getMaximum() {
+        Node node = head;
+
+        while (node.getRight() != null) {
+            node = node.getRight();
+        }
+
+        return node;
+    }
+
     @Override
     public String toString() {
         return head.toString();
