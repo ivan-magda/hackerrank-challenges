@@ -81,5 +81,13 @@ public class Main {
         System.out.println("Successor of (" + 8 + "): " + (successor != null ? successor.getData() : "doesn't exist"));
         Node predecessor = bst.getPredecessor(node);
         System.out.println("Predecessor of (" + 8 + "): " + (predecessor != null ? predecessor.getData() : "doesn't exist"));
+
+        // Iterative insert.
+        bst = new BinarySearchTree(new int[]{2, 4, 3, 1, 0});
+        System.out.println();
+        System.out.println(bst);
+
+        bst.iterativeInsert(5);
+        System.out.println(bst);
     }
 }

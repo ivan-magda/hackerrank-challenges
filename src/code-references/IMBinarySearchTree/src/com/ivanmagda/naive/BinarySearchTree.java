@@ -52,6 +52,29 @@ public class BinarySearchTree {
         head.insert(value);
     }
 
+    public void iterativeInsert(int value) {
+        Node toInsert = new Node(value);
+        Node parent = null;
+        Node current = head;
+
+        while (current != null) {
+            parent = current;
+            current = toInsert.getData() < current.getData()
+                    ? current.getLeft()
+                    : current.getRight();
+        }
+
+        toInsert.setParent(parent);
+
+        if (parent == null) {
+            head = toInsert;
+        } else if (toInsert.getData() < parent.getData()) {
+            parent.setLeft(toInsert);
+        } else {
+            parent.setRight(toInsert);
+        }
+    }
+
     public Node search(int value) {
         return head.search(value);
     }
