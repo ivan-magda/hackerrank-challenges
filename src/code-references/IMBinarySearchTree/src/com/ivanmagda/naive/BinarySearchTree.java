@@ -30,17 +30,17 @@ public class BinarySearchTree {
         void process(int value);
     }
 
-    private Node head;
+    private Node root;
 
     public BinarySearchTree(int value) {
-        this.head = new Node(value);
+        this.root = new Node(value);
     }
 
     public BinarySearchTree(int[] values) {
         if (values.length < 1) {
             throw new Error("Pass non-empty array");
         } else {
-            this.head = new Node(values[0]);
+            this.root = new Node(values[0]);
 
             for (int i = 1; i < values.length; i++) {
                 add(values[i]);
@@ -49,13 +49,13 @@ public class BinarySearchTree {
     }
 
     public void add(int value) {
-        head.insert(value);
+        root.insert(value);
     }
 
     public void iterativeInsert(int value) {
         Node toInsert = new Node(value);
         Node parent = null;
-        Node current = head;
+        Node current = root;
 
         while (current != null) {
             parent = current;
@@ -67,7 +67,7 @@ public class BinarySearchTree {
         toInsert.setParent(parent);
 
         if (parent == null) {
-            head = toInsert;
+            root = toInsert;
         } else if (toInsert.getData() < parent.getData()) {
             parent.setLeft(toInsert);
         } else {
@@ -76,11 +76,11 @@ public class BinarySearchTree {
     }
 
     public Node search(int value) {
-        return head.search(value);
+        return root.search(value);
     }
 
     public Node iterativeSearch(int value) {
-        Node node = head;
+        Node node = root;
 
         while (node != null && value != node.getData()) {
             node = value < node.getData() ? node.getLeft() : node.getRight();
@@ -90,11 +90,11 @@ public class BinarySearchTree {
     }
 
     public boolean contains(int value) {
-        return head.contains(value);
+        return root.contains(value);
     }
 
     public Node getMinimum() {
-        return head.getMinimum();
+        return root.getMinimum();
     }
 
     public Node minimum(Node node) {
@@ -102,7 +102,7 @@ public class BinarySearchTree {
     }
 
     public Node getMaximum() {
-        return head.getMaximum();
+        return root.getMaximum();
     }
 
     public Node maximum(Node node) {
@@ -110,7 +110,7 @@ public class BinarySearchTree {
     }
 
     public int getHeight() {
-        return getHeight(head);
+        return getHeight(root);
     }
 
     private int getHeight(Node node) {
@@ -156,19 +156,19 @@ public class BinarySearchTree {
     }
 
     public boolean remove(int value) {
-        if (head == null) {
+        if (root == null) {
             return false;
         } else {
-            if (head.getData() == value) {
+            if (root.getData() == value) {
                 Node auxRoot = new Node(0);
-                auxRoot.setLeft(head);
+                auxRoot.setLeft(root);
 
-                boolean result = head.remove(value, auxRoot);
-                head = auxRoot.getLeft();
+                boolean result = root.remove(value, auxRoot);
+                root = auxRoot.getLeft();
 
                 return result;
             } else {
-                return head.remove(value, null);
+                return root.remove(value, null);
             }
         }
     }
@@ -179,7 +179,7 @@ public class BinarySearchTree {
      */
     private void transplant(Node parent, Node child) {
         if (parent.getParent() == null) {
-            head = child;
+            root = child;
         } else if (parent == parent.getParent().getLeft()) {
             parent.getParent().setLeft(child);
         } else {
@@ -225,13 +225,13 @@ public class BinarySearchTree {
     }
 
     public void inorderTreeWalkWithoutRecursion(TreeWalkCallback treeWalkCallback) {
-        if (head == null) {
+        if (root == null) {
             return;
         }
 
         // Keep the nodes in the path that are waiting to be visited.
         Stack<Node> stack = new Stack<>();
-        Node node = head;
+        Node node = root;
 
         // First node to be visited will be the left one.
         while (node != null) {
@@ -256,7 +256,7 @@ public class BinarySearchTree {
     }
 
     public void inorderTreeWalk(TreeWalkCallback treeWalkCallback) {
-        inorderTraversal(head, treeWalkCallback);
+        inorderTraversal(root, treeWalkCallback);
     }
 
     private void inorderTraversal(Node node, TreeWalkCallback treeWalkCallback) {
@@ -268,7 +268,7 @@ public class BinarySearchTree {
     }
 
     public void preorderTreeWalk(TreeWalkCallback treeWalkCallback) {
-        preorderTraversal(head, treeWalkCallback);
+        preorderTraversal(root, treeWalkCallback);
     }
 
     private void preorderTraversal(Node node, TreeWalkCallback treeWalkCallback) {
@@ -280,7 +280,7 @@ public class BinarySearchTree {
     }
 
     public void postorderTreeWalk(TreeWalkCallback treeWalkCallback) {
-        postorderTraversal(head, treeWalkCallback);
+        postorderTraversal(root, treeWalkCallback);
     }
 
     private void postorderTraversal(Node node, TreeWalkCallback treeWalkCallback) {
@@ -293,6 +293,6 @@ public class BinarySearchTree {
 
     @Override
     public String toString() {
-        return head.toString();
+        return root.toString();
     }
 }
