@@ -45,6 +45,10 @@ public class Main {
         bst.inorderTreeWalk(inorderList::add);
         System.out.println("Inorder: " + inorderList);
 
+        List<Integer> inorderWithoutRecursionList = new ArrayList<>();
+        bst.inorderTreeWalkWithoutRecursion(inorderWithoutRecursionList::add);
+        System.out.println("Inorder without recursion: " + inorderWithoutRecursionList);
+
         List<Integer> preorderList = new ArrayList<>();
         bst.preorderTreeWalk(preorderList::add);
         System.out.println("Preorder: " + preorderList);

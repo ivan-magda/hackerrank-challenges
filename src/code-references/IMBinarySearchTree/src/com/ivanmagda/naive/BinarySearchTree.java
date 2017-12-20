@@ -22,6 +22,8 @@
 
 package com.ivanmagda.naive;
 
+import java.util.Stack;
+
 public class BinarySearchTree {
 
     public interface TreeWalkCallback {
@@ -68,6 +70,37 @@ public class BinarySearchTree {
                 return result;
             } else {
                 return head.remove(value, null);
+            }
+        }
+    }
+
+    public void inorderTreeWalkWithoutRecursion(TreeWalkCallback treeWalkCallback) {
+        if (head == null) {
+            return;
+        }
+
+        // Keep the nodes in the path that are waiting to be visited.
+        Stack<Node> stack = new Stack<>();
+        Node node = head;
+
+        // First node to be visited will be the left one.
+        while (node != null) {
+            stack.push(node);
+            node = node.getLeft();
+        }
+
+        // Traverse the tree.
+        while (!stack.isEmpty()) {
+            node = stack.pop();
+            treeWalkCallback.process(node.getData());
+
+            if (node.getRight() != null) {
+                node = node.getRight();
+
+                while (node != null) {
+                    stack.push(node);
+                    node = node.getLeft();
+                }
             }
         }
     }
