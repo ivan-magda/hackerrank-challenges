@@ -68,6 +68,10 @@ public class Node {
         return data;
     }
 
+    public boolean isLeaf() {
+        return left == null && right == null;
+    }
+
     public void insert(int value) {
         Node node = new Node(value);
 

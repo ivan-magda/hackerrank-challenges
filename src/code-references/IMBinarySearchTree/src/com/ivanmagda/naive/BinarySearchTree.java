@@ -109,6 +109,18 @@ public class BinarySearchTree {
         return node != null ? node.getMaximum() : null;
     }
 
+    public int getHeight() {
+        return getHeight(head);
+    }
+
+    private int getHeight(Node node) {
+        if (node == null || node.isLeaf()) {
+            return 0;
+        } else {
+            return 1 + Math.max(getHeight(node.getLeft()), getHeight(node.getRight()));
+        }
+    }
+
     public Node getSuccessor(Node node) {
         if (node == null) {
             return null;
