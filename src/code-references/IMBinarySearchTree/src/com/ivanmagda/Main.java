@@ -89,5 +89,12 @@ public class Main {
 
         bst.iterativeInsert(5);
         System.out.println(bst);
+
+        // Transplant.
+        bst = new BinarySearchTree(new int[]{12, 5, 2, 9, 18, 19, 15, 17, 13, 14});
+        System.out.println();
+        System.out.println(bst);
+        bst.delete(bst.search(12));
+        System.out.println(bst);
     }
 }

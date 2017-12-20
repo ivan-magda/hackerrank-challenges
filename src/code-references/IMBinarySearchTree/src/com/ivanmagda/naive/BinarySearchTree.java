@@ -161,6 +161,57 @@ public class BinarySearchTree {
         }
     }
 
+    /**
+     * Используется для перемещения поддеревьев в бинарном дереве поиска.
+     * Заменяет одно поддерево, являющееся дочерним по отношению к своему родителю, другим поддеревом.
+     */
+    private void transplant(Node parent, Node child) {
+        if (parent.getParent() == null) {
+            head = child;
+        } else if (parent == parent.getParent().getLeft()) {
+            parent.getParent().setLeft(child);
+        } else {
+            parent.getParent().setRight(child);
+        }
+
+        if (child != null) {
+            child.setParent(parent.getParent());
+        }
+    }
+
+    public void delete(Node node) {
+        // Процедура удаления содержит 4 случая:
+        //
+        // 1) Когда удаляемая вершина не содержит левого дочернего узла, то мы просто заменяем удаляемую вершину его
+        // правым дочерним узлом, который может быть (или не быть) null.
+        if (node.getLeft() == null) {
+            transplant(node, node.getRight());
+
+            // 2) Есди удаляемая вершина имеет только один дочерний узел, являющейся его левым дочерним узлом,
+            // то мы заменяем удаляемую вершину на его левую дочернюю вершину.
+        } else if (node.getRight() == null) {
+            transplant(node, node.getLeft());
+        } else {
+            // В противном случае удаляемая вершина имеет левый и правый дочерние узлы. Мы находим узел y (минимальный),
+            // следующий за удаляемым. Этот узел располагается в правом поддереве.
+            Node min = minimum(node.getRight());
+
+            // 4) В противном случае y находится в правом поддереве узла z, но не является правым дочерним узлом z.
+            // В этом случае мы сначала заменяем y его собственным правым дочерним узлом, а затем заменяем z на y.
+            if (min.getParent() != node) {
+                transplant(min, min.getRight());
+                min.setRight(node.getRight());
+                min.getRight().setParent(min);
+            }
+
+            // 3) Если y является правым дочерним узлом z, то мы заменяем z на y, оставляя нетронутым правый дочерний
+            // по отношению к y узел.
+            transplant(node, min);
+            min.setLeft(node.getLeft());
+            min.getLeft().setParent(min);
+        }
+    }
+
     public void inorderTreeWalkWithoutRecursion(TreeWalkCallback treeWalkCallback) {
         if (head == null) {
             return;
