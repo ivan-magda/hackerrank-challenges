@@ -98,5 +98,15 @@ public class Main {
         bst.delete(bst.search(12));
         System.out.println(bst);
         System.out.println("Height: " + bst.getHeight());
+
+        // Depth.
+
+        System.out.println();
+        node = bst.iterativeSearch(13);
+        System.out.println("Depth of 13 (root): " + node.getDepth());
+        node = bst.iterativeSearch(5);
+        System.out.println("Depth of 5: " + node.getDepth());
+        node = bst.iterativeSearch(17);
+        System.out.println("Depth of 17: " + node.getDepth());
     }
 }

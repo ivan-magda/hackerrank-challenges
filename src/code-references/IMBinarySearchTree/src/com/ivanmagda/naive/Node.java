@@ -72,6 +72,18 @@ public class Node {
         return left == null && right == null;
     }
 
+    public int getDepth() {
+        Node current = this;
+        int depth = 0;
+
+        while (current.getParent() != null) {
+            current = current.parent;
+            depth++;
+        }
+
+        return depth;
+    }
+
     public void insert(int value) {
         Node node = new Node(value);
 
