@@ -39,6 +39,8 @@ public class Main {
         bst.remove(5);
         System.out.println(bst);
 
+        // Tree walks.
+
         List<Integer> inorderList = new ArrayList<>();
         bst.inorderTreeWalk(inorderList::add);
         System.out.println("Inorder: " + inorderList);
@@ -46,5 +48,9 @@ public class Main {
         List<Integer> preorderList = new ArrayList<>();
         bst.preorderTreeWalk(preorderList::add);
         System.out.println("Preorder: " + preorderList);
+
+        List<Integer> postorderList = new ArrayList<>();
+        bst.postorderTreeWalk(postorderList::add);
+        System.out.println("Postorder: " + postorderList);
     }
 }

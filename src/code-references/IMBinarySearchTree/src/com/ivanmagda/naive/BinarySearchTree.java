@@ -96,6 +96,18 @@ public class BinarySearchTree {
         }
     }
 
+    public void postorderTreeWalk(TreeWalkCallback treeWalkCallback) {
+        postorderTraversal(head, treeWalkCallback);
+    }
+
+    private void postorderTraversal(Node node, TreeWalkCallback treeWalkCallback) {
+        if (node != null) {
+            postorderTraversal(node.getLeft(), treeWalkCallback);
+            postorderTraversal(node.getRight(), treeWalkCallback);
+            treeWalkCallback.process(node.getData());
+        }
+    }
+
     @Override
     public String toString() {
         return head.toString();
