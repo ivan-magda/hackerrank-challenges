@@ -42,5 +42,9 @@ public class Main {
         List<Integer> inorderList = new ArrayList<>();
         bst.inorderTreeWalk(inorderList::add);
         System.out.println("Inorder: " + inorderList);
+
+        List<Integer> preorderList = new ArrayList<>();
+        bst.preorderTreeWalk(preorderList::add);
+        System.out.println("Preorder: " + preorderList);
     }
 }

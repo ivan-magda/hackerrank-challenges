@@ -72,15 +72,27 @@ public class BinarySearchTree {
         }
     }
 
-    public void inorderTreeWalk(TreeWalkCallback callback) {
-        _inorderTreeWalk(head, callback);
+    public void inorderTreeWalk(TreeWalkCallback treeWalkCallback) {
+        inorderTraversal(head, treeWalkCallback);
     }
 
-    private void _inorderTreeWalk(Node node, TreeWalkCallback callback) {
+    private void inorderTraversal(Node node, TreeWalkCallback treeWalkCallback) {
         if (node != null) {
-            _inorderTreeWalk(node.getLeft(), callback);
-            callback.process(node.getData());
-            _inorderTreeWalk(node.getRight(), callback);
+            inorderTraversal(node.getLeft(), treeWalkCallback);
+            treeWalkCallback.process(node.getData());
+            inorderTraversal(node.getRight(), treeWalkCallback);
+        }
+    }
+
+    public void preorderTreeWalk(TreeWalkCallback treeWalkCallback) {
+        preorderTraversal(head, treeWalkCallback);
+    }
+
+    private void preorderTraversal(Node node, TreeWalkCallback treeWalkCallback) {
+        if (node != null) {
+            treeWalkCallback.process(node.getData());
+            preorderTraversal(node.getLeft(), treeWalkCallback);
+            preorderTraversal(node.getRight(), treeWalkCallback);
         }
     }
 
