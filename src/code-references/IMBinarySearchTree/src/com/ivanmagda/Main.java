@@ -2,6 +2,7 @@ package com.ivanmagda;
 
 import com.ivanmagda.interfacelable.NonEmptyBST;
 import com.ivanmagda.naive.BinarySearchTree;
+import com.ivanmagda.naive.Node;
 
 import java.util.*;
 import java.util.stream.IntStream;
@@ -72,5 +73,11 @@ public class Main {
         System.out.println(bst);
         System.out.println("Search for 8 (recursion): " + (bst.search(8) != null));
         System.out.println("Search for 8 (iterative): " + (bst.iterativeSearch(8) != null));
+
+        // Successor and predecessor.
+
+        Node node = bst.iterativeSearch(8);
+        Node successor = bst.getSuccessor(node);
+        System.out.println("Successor of (" + 8 + "): " + (successor != null ? successor.getData() : "doesn't exist"));
     }
 }

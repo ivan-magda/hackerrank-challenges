@@ -86,6 +86,23 @@ public class BinarySearchTree {
         return node != null ? node.getMaximum() : null;
     }
 
+    public Node getSuccessor(Node node) {
+        if (node == null) {
+            return null;
+        } else if (node.getRight() != null) {
+            return node.getRight().getMinimum();
+        }
+
+        Node current = node;
+        Node parent = node.getParent();
+        while (parent != null && current == parent.getRight()) {
+            current = parent;
+            parent = parent.getParent();
+        }
+
+        return parent;
+    }
+
     public boolean remove(int value) {
         if (head == null) {
             return false;
