@@ -103,6 +103,23 @@ public class BinarySearchTree {
         return parent;
     }
 
+    public Node getPredecessor(Node node) {
+        if (node == null) {
+            return null;
+        } else if (node.getLeft() != null) {
+            return node.getLeft().getMaximum();
+        }
+
+        Node current = node;
+        Node parent = node.getParent();
+        while (parent != null && current == parent.getLeft()) {
+            current = parent;
+            parent = parent.getParent();
+        }
+
+        return parent;
+    }
+
     public boolean remove(int value) {
         if (head == null) {
             return false;

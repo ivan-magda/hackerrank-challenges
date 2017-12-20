@@ -79,5 +79,7 @@ public class Main {
         Node node = bst.iterativeSearch(8);
         Node successor = bst.getSuccessor(node);
         System.out.println("Successor of (" + 8 + "): " + (successor != null ? successor.getData() : "doesn't exist"));
+        Node predecessor = bst.getPredecessor(node);
+        System.out.println("Predecessor of (" + 8 + "): " + (predecessor != null ? predecessor.getData() : "doesn't exist"));
     }
 }
