@@ -74,8 +74,16 @@ public class BinarySearchTree {
         return head.getMinimum();
     }
 
+    public Node minimum(Node node) {
+        return node != null ? node.getMinimum() : null;
+    }
+
     public Node getMaximum() {
         return head.getMaximum();
+    }
+
+    public Node maximum(Node node) {
+        return node != null ? node.getMaximum() : null;
     }
 
     public boolean remove(int value) {
