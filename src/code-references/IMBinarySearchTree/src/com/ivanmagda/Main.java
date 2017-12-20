@@ -3,6 +3,9 @@ package com.ivanmagda;
 import com.ivanmagda.interfacelable.NonEmptyBST;
 import com.ivanmagda.naive.BinarySearchTree;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -35,5 +38,9 @@ public class Main {
 
         bst.remove(5);
         System.out.println(bst);
+
+        List<Integer> inorderList = new ArrayList<>();
+        bst.inorderTreeWalk(inorderList::add);
+        System.out.println("Inorder: " + inorderList);
     }
 }
