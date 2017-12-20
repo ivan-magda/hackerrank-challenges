@@ -36,12 +36,34 @@ public class BinarySearchTree {
         this.head = new Node(value);
     }
 
+    public BinarySearchTree(int[] values) {
+        if (values.length < 1) {
+            throw new Error("Pass non-empty array");
+        } else {
+            this.head = new Node(values[0]);
+
+            for (int i = 1; i < values.length; i++) {
+                add(values[i]);
+            }
+        }
+    }
+
     public void add(int value) {
         head.insert(value);
     }
 
     public Node search(int value) {
         return head.search(value);
+    }
+
+    public Node iterativeSearch(int value) {
+        Node node = head;
+
+        while (node != null && value != node.getData()) {
+            node = value < node.getData() ? node.getLeft() : node.getRight();
+        }
+
+        return node;
     }
 
     public boolean contains(int value) {

@@ -3,8 +3,8 @@ package com.ivanmagda;
 import com.ivanmagda.interfacelable.NonEmptyBST;
 import com.ivanmagda.naive.BinarySearchTree;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.IntStream;
 
 public class Main {
 
@@ -56,5 +56,21 @@ public class Main {
         List<Integer> postorderList = new ArrayList<>();
         bst.postorderTreeWalk(postorderList::add);
         System.out.println("Postorder: " + postorderList);
+
+        // Search.
+
+        int length = 10;
+        int bound = length * 2;
+        int[] values = new int[length];
+        Random random = new Random();
+        for (int i = 0; i < length; i++) {
+            values[i] = random.nextInt(bound) + 1;
+        }
+
+        bst = new BinarySearchTree(values);
+        System.out.println();
+        System.out.println(bst);
+        System.out.println("Search for 8 (recursion): " + (bst.search(8) != null));
+        System.out.println("Search for 8 (iterative): " + (bst.iterativeSearch(8) != null));
     }
 }
