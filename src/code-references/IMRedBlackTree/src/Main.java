@@ -20,5 +20,18 @@ public class Main {
 
         Node node = rbBST.search(4);
         System.out.println("Depth (4): " + node.getDepth());
+
+        rbBST.clear();
+        rbBST.insert(41);
+        rbBST.insert(38);
+        rbBST.insert(31);
+        rbBST.insert(12);
+        rbBST.insert(19);
+        rbBST.insert(8);
+        System.out.println();
+        System.out.println(rbBST);
+
+        rbBST.delete(rbBST.search(8));
+        System.out.println(rbBST);
     }
 }
