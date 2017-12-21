@@ -41,7 +41,7 @@ public class IMRedBlackBST {
 
     // Rotation.
 
-    public void leftRotate(Node node) {
+    private void leftRotate(Node node) {
         // Make newParent's left subtree -> right subtree of the node.
         Node newParent = node.getRight();
         node.setRight(newParent.getLeft());
@@ -64,7 +64,7 @@ public class IMRedBlackBST {
         node.setParent(newParent);
     }
 
-    public void rightRotate(Node node) {
+    private void rightRotate(Node node) {
         Node newParent = node.getLeft();
         node.setLeft(newParent.getRight());
 
