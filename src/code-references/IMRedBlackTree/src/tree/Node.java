@@ -58,6 +58,10 @@ public class Node {
         isRed = red;
     }
 
+    public boolean isLeaf() {
+        return left == null && right == null;
+    }
+
     public int getDepth() {
         Node current = this;
         int depth = 0;
