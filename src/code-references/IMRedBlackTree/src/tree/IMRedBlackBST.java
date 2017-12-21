@@ -2,6 +2,9 @@ package tree;
 
 public class IMRedBlackBST {
 
+    private static final boolean RED = true;
+    private static final boolean BLACK = false;
+
     private Node root;
 
     public IMRedBlackBST() {
@@ -67,5 +70,32 @@ public class IMRedBlackBST {
 
         newParent.setRight(node);
         node.setParent(newParent);
+    }
+
+    public void insert(Node node) {
+        Node parent = null;
+        Node current = root;
+
+        while (current != null) {
+            parent = current;
+            current = node.getData() < current.getData() ? node.getLeft() : node.getRight();
+        }
+
+        node.setParent(parent);
+
+        if (parent == null) {
+            root = node;
+        } else if (node.getData() < parent.getData()) {
+            parent.setLeft(node);
+        } else {
+            parent.setRight(node);
+        }
+
+        node.setIsRed(RED);
+        insertFixUp(node);
+    }
+
+    private void insertFixUp(Node node) {
+
     }
 }

@@ -54,7 +54,7 @@ public class Node {
         return isRed;
     }
 
-    public void setRed(boolean red) {
+    public void setIsRed(boolean red) {
         isRed = red;
     }
 }
