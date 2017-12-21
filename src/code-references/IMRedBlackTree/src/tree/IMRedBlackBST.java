@@ -165,6 +165,26 @@ public class IMRedBlackBST {
         root.setColor(BLACK);
     }
 
+    // Delete.
+
+    /**
+     * Используется для перемещения поддеревьев в бинарном дереве поиска.
+     * Заменяет одно поддерево, являющееся дочерним по отношению к своему родителю, другим поддеревом.
+     */
+    private void transplant(Node parent, Node child) {
+        if (parent.getParent() == null) {
+            root = child;
+        } else if (parent == parent.getParent().getLeft()) {
+            parent.getParent().setLeft(child);
+        } else {
+            parent.getParent().setRight(child);
+        }
+
+        if (child != null) {
+            child.setParent(parent.getParent());
+        }
+    }
+
     // Search.
 
     public Node search(int value) {
