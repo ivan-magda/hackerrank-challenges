@@ -183,6 +183,26 @@ public class IMRedBlackBST {
         return search(value) != null;
     }
 
+    public Node getMinimum(Node node) {
+        Node minNode = node;
+
+        while (minNode.getLeft() != null) {
+            minNode = minNode.getLeft();
+        }
+
+        return minNode;
+    }
+
+    public Node getMaximum(Node node) {
+        Node maxNode = node;
+
+        while (maxNode.getRight() != null) {
+            maxNode = maxNode.getRight();
+        }
+
+        return maxNode;
+    }
+
     @Override
     public String toString() {
         return root.toString();
