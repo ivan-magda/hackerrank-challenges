@@ -166,4 +166,9 @@ public class IMRedBlackBST {
 
         return current;
     }
+
+    @Override
+    public String toString() {
+        return root.toString();
+    }
 }

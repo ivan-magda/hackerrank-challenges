@@ -57,4 +57,21 @@ public class Node {
     public void setColor(boolean red) {
         isRed = red;
     }
+
+    @Override
+    public String toString() {
+        String text = "";
+
+        if (left != null) {
+            text += "(" + left.toString() + ") <- ";
+        }
+
+        text += String.valueOf(data);
+
+        if (right != null) {
+            text += " -> (" + right.toString() + ")";
+        }
+
+        return text;
+    }
 }
