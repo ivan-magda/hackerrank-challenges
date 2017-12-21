@@ -1,18 +1,18 @@
 package tree;
 
-public class IMRedBlackTree {
+public class IMRedBlackBST {
 
     private Node root;
 
-    public IMRedBlackTree() {
+    public IMRedBlackBST() {
         this.root = null;
     }
 
-    public IMRedBlackTree(Node root) {
+    public IMRedBlackBST(Node root) {
         this.root = root;
     }
 
-    public IMRedBlackTree(int data) {
+    public IMRedBlackBST(int data) {
         this(new Node(data));
     }
 
