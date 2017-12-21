@@ -159,14 +159,18 @@ public class Node {
 
     @Override
     public String toString() {
-        if (left == null && right == null) {
-            return "(" + String.valueOf(data) + ")";
-        } else {
-            return "(" +
-                    (left == null ? "()" : left.toString()) + " " +
-                    String.valueOf(data) + " " +
-                    (right == null ? "()" : right.toString())
-                    + ")";
+        String text = "";
+
+        if (left != null) {
+            text += "(" + left.toString() + ") <- ";
         }
+
+        text += String.valueOf(data);
+
+        if (right != null) {
+            text += " -> (" + right.toString() + ")";
+        }
+
+        return text;
     }
 }
