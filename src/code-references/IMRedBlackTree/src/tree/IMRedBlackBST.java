@@ -191,6 +191,56 @@ public class IMRedBlackBST {
         }
     }
 
+    public void delete(Node node) {
+        // Преемник удаляемого узла, перемещается в дереве на позиция узла `node`.
+        Node replacement = node;
+
+        // Узел, который отслеживает перемещение узла `replacement`, который перемещается в исходную позицию
+        // узла `replacement` в дереве, поскольку данный узел тоже может привести к нарушению красно-черных свойств.
+        Node replacementOriginalNode;
+
+        boolean originalColor = replacement.isRed();
+
+        if (node.getLeft() == null) {
+            replacementOriginalNode = node.getRight();
+            transplant(node, node.getRight());
+        } else if (node.getRight() == null) {
+            replacementOriginalNode = node.getLeft();
+            transplant(node, node.getLeft());
+        } else {
+            // В противном случае удаляемая вершина имеет левый и правый дочерние узлы. Мы находим узел y (минимальный),
+            // следующий за удаляемым. Этот узел располагается в правом поддереве.
+            replacement = getMinimum(node.getRight());
+            originalColor = replacement.isRed();
+            replacementOriginalNode = replacement.getRight();
+
+            if (replacement.getParent() == node) {
+                replacementOriginalNode.setParent(replacement);
+            } else {
+                // Y находится в правом поддереве узла z, но не является правым дочерним узлом z.
+                // В этом случае мы сначала заменяем y его собственным правым дочерним узлом, а затем заменяем z на y.
+                transplant(replacement, replacement.getRight());
+                replacement.setRight(node.getRight());
+                replacement.getRight().setParent(replacement);
+            }
+
+            // Y является правым дочерним узлом z, то мы заменяем z на y, оставляя нетронутым правый дочерний
+            // по отношению к y узел.
+            transplant(node, replacement);
+            replacement.setLeft(node.getLeft());
+            replacement.getLeft().setParent(replacement);
+            replacement.setColor(node.isRed());
+        }
+
+        if (originalColor == BLACK) {
+            deleteFixUp(replacementOriginalNode);
+        }
+    }
+
+    private void deleteFixUp(Node node) {
+
+    }
+
     // Search.
 
     public Node search(int value) {
