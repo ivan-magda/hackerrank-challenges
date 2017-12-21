@@ -42,4 +42,26 @@ public class IMRedBlackTree {
         newParent.setLeft(node);
         node.setParent(newParent);
     }
+
+    public void rightRotate(Node node) {
+        Node newParent = node.getLeft();
+        node.setLeft(newParent.getRight());
+
+        if (newParent.getRight() != null) {
+            newParent.getRight().setParent(node);
+        }
+
+        newParent.setParent(node.getParent());
+
+        if (node.getParent() == null) {
+            root = newParent;
+        } else if (node == node.getParent().getLeft()) {
+            node.getParent().setLeft(newParent);
+        } else {
+            node.getParent().setRight(node);
+        }
+
+        newParent.setRight(node);
+        node.setParent(newParent);
+    }
 }
