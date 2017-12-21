@@ -11,6 +11,9 @@ public class Main {
         }
 
         System.out.println(rbBST);
+        rbBST.inorderTreeWalk(value -> System.out.print(String.valueOf(value) + " "));
+        System.out.println();
+
         System.out.println("Height: " + rbBST.getHeight());
         System.out.println("Max node: " + rbBST.getMaximum(rbBST.getRoot()));
         System.out.println("Min node: " + rbBST.getMinimum(rbBST.getRoot()));

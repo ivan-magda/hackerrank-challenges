@@ -2,6 +2,12 @@ package tree;
 
 public class IMRedBlackBST {
 
+    // Interfaces.
+
+    public interface TreeWalkCallback {
+        void process(int value);
+    }
+
     // Instance Variables.
 
     private static final boolean RED = true;
@@ -272,6 +278,44 @@ public class IMRedBlackBST {
         }
 
         return parent;
+    }
+
+    // Tree traversals.
+
+    public void inorderTreeWalk(TreeWalkCallback treeWalkCallback) {
+        inorderTraversal(root, treeWalkCallback);
+    }
+
+    private void inorderTraversal(Node node, TreeWalkCallback treeWalkCallback) {
+        if (node != null) {
+            inorderTraversal(node.getLeft(), treeWalkCallback);
+            treeWalkCallback.process(node.getData());
+            inorderTraversal(node.getRight(), treeWalkCallback);
+        }
+    }
+
+    public void preorderTreeWalk(TreeWalkCallback treeWalkCallback) {
+        preorderTraversal(root, treeWalkCallback);
+    }
+
+    private void preorderTraversal(Node node, TreeWalkCallback treeWalkCallback) {
+        if (node != null) {
+            treeWalkCallback.process(node.getData());
+            preorderTraversal(node.getLeft(), treeWalkCallback);
+            preorderTraversal(node.getRight(), treeWalkCallback);
+        }
+    }
+
+    public void postorderTreeWalk(TreeWalkCallback treeWalkCallback) {
+        postorderTraversal(root, treeWalkCallback);
+    }
+
+    private void postorderTraversal(Node node, TreeWalkCallback treeWalkCallback) {
+        if (node != null) {
+            postorderTraversal(node.getLeft(), treeWalkCallback);
+            postorderTraversal(node.getRight(), treeWalkCallback);
+            treeWalkCallback.process(node.getData());
+        }
     }
 
     @Override
