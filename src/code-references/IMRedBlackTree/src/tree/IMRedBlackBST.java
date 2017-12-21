@@ -2,10 +2,14 @@ package tree;
 
 public class IMRedBlackBST {
 
+    // Instance Variables.
+
     private static final boolean RED = true;
     private static final boolean BLACK = false;
 
     private Node root;
+
+    // Constructors.
 
     public IMRedBlackBST() {
         this.root = null;
@@ -19,6 +23,8 @@ public class IMRedBlackBST {
         this(new Node(data));
     }
 
+    // Getters.
+
     public Node getRoot() {
         return root;
     }
@@ -26,6 +32,8 @@ public class IMRedBlackBST {
     public boolean isEmpty() {
         return root == null;
     }
+
+    // Rotation.
 
     public void leftRotate(Node node) {
         // Make newParent's left subtree -> right subtree of the node.
@@ -71,6 +79,8 @@ public class IMRedBlackBST {
         newParent.setRight(node);
         node.setParent(newParent);
     }
+
+    // Insert.
 
     public void insert(int data) {
         insert(new Node(data));
@@ -154,6 +164,8 @@ public class IMRedBlackBST {
 
         root.setColor(BLACK);
     }
+
+    // Search.
 
     public Node search(int value) {
         Node current = root;
