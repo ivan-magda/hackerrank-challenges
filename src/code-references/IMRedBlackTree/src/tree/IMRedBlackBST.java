@@ -167,6 +167,10 @@ public class IMRedBlackBST {
         return current;
     }
 
+    public boolean contains(int value) {
+        return search(value) != null;
+    }
+
     @Override
     public String toString() {
         return root.toString();
