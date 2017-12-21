@@ -82,7 +82,9 @@ public class IMRedBlackBST {
 
         while (current != null) {
             parent = current;
-            current = node.getData() < current.getData() ? node.getLeft() : node.getRight();
+            current = node.getData() < current.getData()
+                    ? current.getLeft()
+                    : current.getRight();
         }
 
         node.setParent(parent);
@@ -95,13 +97,12 @@ public class IMRedBlackBST {
             parent.setRight(node);
         }
 
-        node.setColor(RED);
         insertFixUp(node);
     }
 
     /**
      * Fixes up the violation of the RedBlackTree properties.
-     * 
+     *
      * @param node, the node which was inserted and may have caused a violation of the RedBlackTree properties.
      *              Fixes up the violation of the RedBlackTree properties that may have been caused during insert(node).
      */
@@ -114,7 +115,7 @@ public class IMRedBlackBST {
                 // Case 1.
                 // Поскольку z и его родитель красные, то нарушается свойство 4.
                 // Поскольку, дядя z, узел y, красный, то мы перекрашиваем узлы и перемещаем указатель z вверх по дереву.
-                if (uncle.isRed()) {
+                if (uncle != null && uncle.isRed()) {
                     node.getParent().setColor(BLACK);
                     uncle.setColor(BLACK);
                     node.getParent().getParent().setColor(RED);
@@ -135,7 +136,7 @@ public class IMRedBlackBST {
             } else {
                 Node uncle = node.getParent().getParent().getLeft();
 
-                if (uncle.isRed()) {
+                if (uncle != null && uncle.isRed()) {
                     node.getParent().setColor(BLACK);
                     uncle.setColor(BLACK);
                     node.getParent().getParent().setColor(RED);
