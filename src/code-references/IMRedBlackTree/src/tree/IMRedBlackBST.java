@@ -39,6 +39,10 @@ public class IMRedBlackBST {
         return root == null;
     }
 
+    public void clear() {
+        root = null;
+    }
+
     // Rotation.
 
     private void leftRotate(Node node) {
