@@ -218,6 +218,42 @@ public class IMRedBlackBST {
         }
     }
 
+    public Node getSuccessor(Node node) {
+        if (node == null) {
+            return null;
+        } else if (node.getRight() != null) {
+            return getMinimum(node.getRight());
+        }
+
+        Node current = node;
+        Node parent = node.getParent();
+
+        while (parent != null && current == parent.getRight()) {
+            current = parent;
+            parent = parent.getParent();
+        }
+
+        return parent;
+    }
+
+    public Node getPredecessor(Node node) {
+        if (node == null) {
+            return null;
+        } else if (node.getLeft() != null) {
+            return getMaximum(node.getLeft());
+        }
+
+        Node current = node;
+        Node parent = node.getParent();
+
+        while (parent != null && current == parent.getLeft()) {
+            current = parent;
+            parent = parent.getParent();
+        }
+
+        return parent;
+    }
+
     @Override
     public String toString() {
         return root.toString();
