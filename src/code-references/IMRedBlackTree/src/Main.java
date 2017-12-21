@@ -1,9 +1,9 @@
-import tree.IMRedBlackTree;
+import tree.IMRedBlackBST;
 
 public class Main {
 
     public static void main(String[] args) {
-        IMRedBlackTree tree = new IMRedBlackTree();
+        IMRedBlackBST tree = new IMRedBlackBST(5);
         System.out.println(tree);
     }
 }

@@ -12,7 +12,7 @@ public class IMRedBlackBST {
     }
 
     public IMRedBlackBST(Node root) {
-        this.root = root;
+        insert(root);
     }
 
     public IMRedBlackBST(int data) {
@@ -95,11 +95,56 @@ public class IMRedBlackBST {
             parent.setRight(node);
         }
 
-        node.setIsRed(RED);
+        node.setColor(RED);
         insertFixUp(node);
     }
 
     private void insertFixUp(Node node) {
+        // While there is a violation of the RedBlackTree properties..
+        while (node.getParent() != null && node.getParent().isRed()) {
+            // If node's parent is the the left child of it's parent.
+            if (node.getParent() == node.getParent().getParent().getLeft()) {
+                Node uncle = node.getParent().getParent().getRight();
+                // Case 1.
+                // Поскольку z и его родитель красные, то нарушается свойство 4.
+                // Поскольку, дядя z, узел y, красный, то мы перекрашиваем узлы и перемещаем указатель z вверх по дереву.
+                if (uncle.isRed()) {
+                    node.getParent().setColor(BLACK);
+                    uncle.setColor(BLACK);
+                    node.getParent().getParent().setColor(RED);
+                    node = node.getParent().getParent();
+                // Case 2: if node is black & node is a right child.
+                } else if (node == node.getParent().getRight()) {
+                    // leftRotate around node's parent
+                    node = node.getParent();
+                    leftRotate(node);
+                // Case 3: else uncle is black AND node is a left child
+                } else {
+                    // recolor and rotate round z's grandpa
+                    node.getParent().setColor(BLACK);
+                    node.getParent().getParent().setColor(RED);
+                    rightRotate(node.getParent().getParent());
+                }
+            // If node's parent is the right child of it's parent.
+            } else {
+                Node uncle = node.getParent().getParent().getLeft();
 
+                if (uncle.isRed()) {
+                    node.getParent().setColor(BLACK);
+                    uncle.setColor(BLACK);
+                    node.getParent().getParent().setColor(RED);
+                    node = node.getParent().getParent();
+                } else if (node == node.getParent().getLeft()) {
+                    node = node.getParent();
+                    rightRotate(node);
+                } else {
+                    node.getParent().setColor(BLACK);
+                    node.getParent().getParent().setColor(RED);
+                    leftRotate(node.getParent().getParent());
+                }
+            }
+        }
+
+        root.setColor(BLACK);
     }
 }
