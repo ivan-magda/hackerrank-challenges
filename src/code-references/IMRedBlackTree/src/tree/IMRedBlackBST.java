@@ -99,6 +99,12 @@ public class IMRedBlackBST {
         insertFixUp(node);
     }
 
+    /**
+     * Fixes up the violation of the RedBlackTree properties.
+     * 
+     * @param node, the node which was inserted and may have caused a violation of the RedBlackTree properties.
+     *              Fixes up the violation of the RedBlackTree properties that may have been caused during insert(node).
+     */
     private void insertFixUp(Node node) {
         // While there is a violation of the RedBlackTree properties..
         while (node.getParent() != null && node.getParent().isRed()) {
