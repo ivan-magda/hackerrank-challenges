@@ -11,6 +11,7 @@
 	- [Stack](./IMStack)
 	- [Tree](./IMTree)
 	- [Binary Search Tree](./IMBinarySearchTree)
+	- [Red-Black Tree](./IMRedBlackTree)
 	- [Graph](./IMGraph)
 	- [Resizable Array](./IMResizableArray)
 	- [Min Heap](./IMMinHeap)
