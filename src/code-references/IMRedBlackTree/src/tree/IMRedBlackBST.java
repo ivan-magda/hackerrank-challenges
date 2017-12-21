@@ -72,7 +72,11 @@ public class IMRedBlackBST {
         node.setParent(newParent);
     }
 
-    public void insert(Node node) {
+    public void insert(int data) {
+        insert(new Node(data));
+    }
+
+    private void insert(Node node) {
         Node parent = null;
         Node current = root;
 
