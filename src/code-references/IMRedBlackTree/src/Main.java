@@ -11,6 +11,9 @@ public class Main {
         }
 
         System.out.println(rbBST);
+        System.out.println("Height: " + rbBST.getHeight());
+        System.out.println("Max node: " + rbBST.getMaximum(rbBST.getRoot()));
+        System.out.println("Min node: " + rbBST.getMinimum(rbBST.getRoot()));
 
         Node node = rbBST.search(4);
         System.out.println("Depth (4): " + node.getDepth());

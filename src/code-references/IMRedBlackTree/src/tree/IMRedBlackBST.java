@@ -203,6 +203,21 @@ public class IMRedBlackBST {
         return maxNode;
     }
 
+    public int getHeight() {
+        return getHeight(root);
+    }
+
+    private int getHeight(Node node) {
+        if (node == null || node.isRed()) {
+            return 0;
+        } else {
+            return 1 + Math.max(
+                    getHeight(node.getLeft()),
+                    getHeight(node.getRight())
+            );
+        }
+    }
+
     @Override
     public String toString() {
         return root.toString();
