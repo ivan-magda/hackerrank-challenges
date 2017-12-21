@@ -20,6 +20,10 @@ public class IMRedBlackBST {
         return root;
     }
 
+    public boolean isEmpty() {
+        return root == null;
+    }
+
     public void leftRotate(Node node) {
         // Make newParent's left subtree -> right subtree of the node.
         Node newParent = node.getRight();
