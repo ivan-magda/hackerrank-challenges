@@ -238,7 +238,86 @@ public class IMRedBlackBST {
     }
 
     private void deleteFixUp(Node node) {
+        // Второй потомок родителя `node`.
+        Node w;
 
+        // While we haven't fixed the tree completely...
+        while (node != root && node.isRed() == BLACK) {
+
+            // if node is it's parent's left child
+            if (node == node.getParent().getLeft()) {
+
+                // set w = node's sibling
+                w = node.getParent().getRight();
+
+                // Case 1, w's color is red.
+                if (w.isRed() == RED) {
+                    w.setColor(BLACK);
+                    node.getParent().setColor(RED);
+                    leftRotate(node.getParent());
+                    w = node.getParent().getRight();
+                }
+
+                // Case 2, both of w's children are black
+                if (w.getLeft().isRed() == BLACK && w.getRight().isRed() == BLACK) {
+                    w.setColor(RED);
+                    node = node.getParent();
+                // Case 3 / Case 4
+                } else {
+                    // Case 3, w's right child is black
+                    if (w.getRight().isRed() == BLACK) {
+                        w.getLeft().setColor(BLACK);
+                        w.setColor(RED);
+                        rightRotate(w);
+                        w = node.getParent().getRight();
+                    }
+                    // Case 4, w = black, w.right = red
+                    w.setColor(node.getParent().isRed());
+                    node.getParent().setColor(BLACK);
+                    w.getRight().setColor(BLACK);
+                    leftRotate(node.getParent());
+                    node = root;
+                }
+                // if node is it's parent's right child
+            } else {
+                // set w to node's sibling
+                w = node.getParent().getLeft();
+
+                // Case 1, w's color is red
+                if (w.isRed() == RED) {
+                    w.setColor(BLACK);
+                    node.getParent().setColor(RED);
+                    rightRotate(node.getParent());
+                    w = node.getParent().getLeft();
+                }
+
+                // Case 2, both of w's children are black
+                if (w.getRight().isRed() == BLACK && w.getLeft().isRed() == BLACK) {
+                    w.setColor(RED);
+                    node = node.getParent();
+                // Case 3 / Case 4
+                } else {
+                    // Case 3, w's left child is black
+                    if (w.getLeft().isRed() == BLACK) {
+                        w.getRight().setColor(BLACK);
+                        w.setColor(RED);
+                        leftRotate(w);
+                        w = node.getParent().getLeft();
+                    }
+
+                    // Case 4, w = black, and w.left = red
+                    w.setColor(node.getParent().isRed());
+                    node.getParent().setColor(BLACK);
+                    w.getLeft().setColor(BLACK);
+                    rightRotate(node.getParent());
+                    node = root;
+                }
+            }
+        }
+
+        // set node to black to ensure there is no violation of
+        // RedBlack tree Properties
+        node.setColor(BLACK);
     }
 
     // Search.
