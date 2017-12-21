@@ -82,7 +82,8 @@ public class Node {
             text += "(" + left.toString() + ") <- ";
         }
 
-        text += String.valueOf(data);
+        String color = isRed ? "{r}" : "{b}";
+        text += String.valueOf(data) + color;
 
         if (right != null) {
             text += " -> (" + right.toString() + ")";
