@@ -154,4 +154,16 @@ public class IMRedBlackBST {
 
         root.setColor(BLACK);
     }
+
+    public Node search(int value) {
+        Node current = root;
+
+        while (current != null && current.getData() != value) {
+            current = value < current.getData()
+                    ? current.getLeft()
+                    : current.getRight();
+        }
+
+        return current;
+    }
 }
