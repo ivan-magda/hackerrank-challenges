@@ -58,6 +58,18 @@ public class Node {
         isRed = red;
     }
 
+    public int getDepth() {
+        Node current = this;
+        int depth = 0;
+
+        while (current.parent != null) {
+            current = current.parent;
+            depth++;
+        }
+
+        return depth;
+    }
+
     @Override
     public String toString() {
         String text = "";
