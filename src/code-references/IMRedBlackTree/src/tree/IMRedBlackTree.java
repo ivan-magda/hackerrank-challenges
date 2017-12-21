@@ -19,4 +19,27 @@ public class IMRedBlackTree {
     public Node getRoot() {
         return root;
     }
+
+    public void leftRotate(Node node) {
+        // Make newParent's left subtree -> right subtree of the node.
+        Node newParent = node.getRight();
+        node.setRight(newParent.getLeft());
+
+        if (newParent.getLeft() != null) {
+            newParent.getLeft().setParent(node);
+        }
+
+        newParent.setParent(node.getParent());
+
+        if (node.getParent() == null) {
+            root = newParent;
+        } else if (node == node.getParent().getLeft()) {
+            node.getParent().setLeft(newParent);
+        } else {
+            node.getParent().setRight(newParent);
+        }
+
+        newParent.setLeft(node);
+        node.setParent(newParent);
+    }
 }
