@@ -15,3 +15,4 @@
 - [Sock Merchant](./sock-merchant)
 - [Drawing Book](./drawing-book)
 - [Counting Valleys](./counting-valleys)
+- [Electronics Shop](./electronics-shop)
