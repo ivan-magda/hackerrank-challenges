@@ -16,3 +16,4 @@
 - [Drawing Book](./drawing-book)
 - [Counting Valleys](./counting-valleys)
 - [Electronics Shop](./electronics-shop)
+- [Cats and a Mouse](./cats-and-a-mouse)
