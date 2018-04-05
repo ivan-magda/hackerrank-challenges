@@ -17,3 +17,4 @@
 - [Counting Valleys](./counting-valleys)
 - [Electronics Shop](./electronics-shop)
 - [Cats and a Mouse](./cats-and-a-mouse)
+- [Designer PDF Viewer](./designer-pdf-viewer)
