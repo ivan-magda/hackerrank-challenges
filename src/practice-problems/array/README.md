@@ -23,3 +23,4 @@
 - [Find Longest Bitonic Subarray in an array](./find-longest-bitonic-subarray-array)
 - [Find maximum difference between two elements in the array by satisfying given constraints](./find-maximum-difference-between-two-elements-array)
 - [Calculate the median of an array](./median-array)
+- [Find subarrays with given sum in an array](./find-subarrays-given-sum-array)
