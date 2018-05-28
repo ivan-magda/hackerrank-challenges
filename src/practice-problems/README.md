@@ -15,7 +15,7 @@
 - Queue
 - [Sorting](./sorting)
 - Stack
-- String
+- [String](./string)
 - Trie
 - Greedy
 - Puzzles
