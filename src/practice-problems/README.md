@@ -19,3 +19,4 @@
 - Trie
 - Greedy
 - Puzzles
+- [Bits](./bits)
